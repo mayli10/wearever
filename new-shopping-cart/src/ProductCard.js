@@ -134,7 +134,7 @@ class ProductCard extends React.Component {
           </CardContent>
         </Collapse>
       </Card>
-      
+
     );
   }
 }
