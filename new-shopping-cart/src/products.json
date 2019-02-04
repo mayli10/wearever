@@ -1,207 +1,194 @@
 {
   "products": [
     {
-      "id": 12,
-      "sku": 12064273040195392,
-      "title": "Cat Tee Black T-Shirt",
-      "description": "4 MSL",
-      "style": "Black with custom print",
-      "price": 10.9,
-      "currencyId": "USD",
-      "currencyFormat": "$",
-      "isFreeShipping": true
-    },
-
-    {
-      "id": 13,
-      "sku": 51498472915966366,
-      "title": "Dark Thug Blue-Navy T-Shirt",
-      "description": "",
-      "style": "Front print and paisley print",
-      "price": 29.45,
-      "currencyId": "USD",
-      "currencyFormat": "$",
-      "isFreeShipping": true
-    },
-
-    {
-      "id": 14,
-      "sku": 10686354557628303,
-      "title": "Sphynx Tie Dye Wine T-Shirt",
-      "description": "GPX Poly 1",
-      "style": "Front tie dye print",
-      "price": 9.0,
-      "currencyId": "USD",
-      "currencyFormat": "$",
-      "isFreeShipping": true
-    },
-
-    {
-      "id": 15,
-      "sku": 11033926921508487,
-      "title": "Skuul",
-      "description": "Treino 2014",
-      "style": "Black T-Shirt with front print",
-      "price": 14.0,
-      "currencyId": "USD",
-      "currencyFormat": "$",
-      "isFreeShipping": true
-    },
-
-    {
-      "id": 11,
-      "sku": 39876704341265606,
-      "title": "Wine Skul T-Shirt",
-      "description": "",
-      "style": "Wine",
-      "price": 13.25,
-      "currencyId": "USD",
-      "currencyFormat": "$",
-      "isFreeShipping": true
-    },
-
-    {
-      "id": 16,
-      "sku": 10412368723880253,
-      "title": "Short Sleeve T-Shirt",
-      "description": "",
-      "style": "Grey",
-      "price": 75.0,
-      "currencyId": "USD",
-      "currencyFormat": "$",
-      "isFreeShipping": true
-    },
-
-    {
-      "id": 0,
-      "sku": 8552515751438644,
-      "title": "Cat Tee Black T-Shirt",
-      "description": "14/15 s/nº",
-      "style": "Branco com listras pretas",
-      "price": 10.9,
-      "currencyId": "USD",
-      "currencyFormat": "$",
-      "isFreeShipping": true
-    },
-
-    {
       "id": 1,
-      "sku": 18644119330491312,
-      "title": "Sphynx Tie Dye Grey T-Shirt",
-      "description": "14/15 s/nº",
-      "style": "Preta com listras brancas",
-      "price": 10.9,
+      "sku": 12064273040195392,
+      "title": "Men’s Northport™ Insulated Softshell Glove",
+      "description": "Comfortable softshell gloves built to keep hands warm and protected in cold weather. Featuring a thermal-reflective lining, water-and-stain repellency, 40g insulation, and touch screen-compatible fingertips.",
+      "ribbon": "Columbia",
+      "price": 45.00,
       "currencyId": "USD",
       "currencyFormat": "$",
-      "isFreeShipping": true
+      "isInStock": true
     },
 
     {
       "id": 2,
-      "sku": 11854078013954528,
-      "title": "Danger Knife Grey",
-      "description": "14/15 s/nº",
-      "style": "Branco com listras pretas",
-      "price": 14.9,
+      "sku": 51498472915966366,
+      "title": "Men’s Thermarator™ Glove",
+      "description": "Designed for an intuitive fit, these soft and comfortable gloves pack serious warmth in cold conditions. Featuring a thermal-reflective lining, 280g fleece insulation, elastic wrists, and fingertip touch screen compatibility.",
+      "ribbon": "Columbia",
+      "price": 30.00,
       "currencyId": "USD",
       "currencyFormat": "$",
-      "isFreeShipping": true
+      "isInStock": true
     },
 
     {
       "id": 3,
-      "sku": 876661122392077,
-      "title": "White DGK Script Tee",
-      "description": "2014 s/nº",
-      "style": "Preto com listras brancas",
-      "price": 14.9,
+      "sku": 10686354557628303,
+      "title": "Men’s Ascender™ Softshell Glove",
+      "description": "Comfortable everyday softshell gloves designed to keep hands warm and protected in chilly weather. Featuring advanced water-and-stain repellency, silicone palm grip, and a touch screen-compatible fingertip.",
+      "ribbon": "Columbia",
+      "price": 35.00,
       "currencyId": "USD",
       "currencyFormat": "$",
-      "isFreeShipping": true
+      "isInStock": true
     },
 
     {
       "id": 4,
-      "sku": 9197907543445677,
-      "title": "Born On The Streets",
-      "description": "14/15 s/nº - Jogador",
-      "style": "Branco com listras pretas",
-      "price": 25.9,
+      "sku": 11033926921508487,
+      "title": "Thick Wool Thermal Socks",
+      "description": "HIGH QUALITY MATERIALS: 55% wool, 25% cotton, 15% polyester, 5% spandex. These wool socks are a blend of high cashmere and merino materials, super soft fuzzy inner and stylish outer design.",
+      "ribbon": "Moggei",
+      "price": 17.00,
       "currencyId": "USD",
       "currencyFormat": "$",
-      "isFreeShipping": false
+      "isInStock": true
     },
 
     {
       "id": 5,
-      "sku": 10547961582846888,
-      "title": "Tso 3D Short Sleeve T-Shirt A",
-      "description": "14/15 + Camiseta 1º Mundial",
-      "style": "Preto",
-      "price": 10.9,
+      "sku": 39876704341265606,
+      "title": "Men’s Northbounder™ Interchange Jacket",
+      "description": "A versatile 3-in-one jacket with a waterproof-breathable outer shell and insulated inner layer you can wear separately or together for maximum warmth and protection.",
+      "price": 250.00,
       "currencyId": "USD",
       "currencyFormat": "$",
-      "isFreeShipping": false
+      "isInStock": true
     },
 
     {
       "id": 6,
-      "sku": 6090484789343891,
-      "title": "Man Tie Dye Cinza Grey T-Shirt",
-      "description": "Goleiro 13/14",
-      "style": "Branco",
-      "price": 49.9,
+      "sku": 10412368723880253,
+      "title": "Men’s Northbounder™ Down Parka",
+      "description": "A versatile winter parka built for warmth and protection in chilly conditions. Featuring a waterproof-breathable shell, 450-fill power down insulation, just-right stretch, zippered hand pockets, and adjustable hood, cuffs, and hem.",
+      "ribbon": "Columbia",
+      "price": 199.00,
       "currencyId": "USD",
       "currencyFormat": "$",
-      "isFreeShipping": true
+      "isInStock": true
     },
 
     {
       "id": 7,
-      "sku": 18532669286405342,
-      "title": "Crazy Monkey Black T-Shirt",
-      "description": "1977 Infantil",
-      "style": "Preto com listras brancas",
-      "price": 22.5,
+      "sku": 8552515751438644,
+      "title": "Men’s Norwester™ Anorak II",
+      "description": "Unique style meets winter warmth with a water-resistant shell, thermal-reflective lining, synthetic down insulation, side entry zip, zippered waist pocket, elastic cuffs, and adjustable hood and hem.",
+      "ribbon": "Columbia",
+      "price": 150.00,
       "currencyId": "USD",
       "currencyFormat": "$",
-      "isFreeShipping": true
+      "isInStock": true
     },
 
     {
       "id": 8,
-      "sku": 5619496040738316,
-      "title": "Tso 3D Black T-Shirt",
-      "description": "",
-      "style": "Azul escuro",
-      "price": 18.7,
+      "sku": 18644119330491312,
+      "title": "Men’s Lone Fir 650 TurboDown™ Hooded Jacket",
+      "description": "The mountains are calling—answer them in this water-resistant hooded puffy made to withstand winter’s worst.",
+      "ribbon": "Columbia",
+      "price": 150.00,
       "currencyId": "USD",
       "currencyFormat": "$",
-      "isFreeShipping": false
+      "isInStock": true
     },
 
     {
       "id": 9,
-      "sku": 11600983276356165,
-      "title": "Crazy Monkey Grey",
-      "description": "",
-      "style": "",
-      "price": 134.9,
+      "sku": 11854078013954528,
+      "title": "Men’s Ramble™ Down Hybrid Hooded Jacket",
+      "description": "This performance hybrid jacket is built for active days in the cold. It's water-and-wind-resistant, with an adjustable hem to seal in the heat.",
+      "ribbon": "Columbia",
+      "price": 69.98,
       "currencyId": "USD",
       "currencyFormat": "$",
-      "isFreeShipping": true
+      "isInStock": true
     },
 
     {
       "id": 10,
-      "sku": 27250082398145995,
-      "title": "On The Streets Black T-Shirt",
-      "description": "",
-      "style": "",
-      "price": 49.0,
+      "sku": 876661122392077,
+      "title": "Men’s Pike Lake™ Jacket",
+      "description": "Wide baffles packed with synthetic insulation and thermal-reflective lining make this jacket your go-to when temperatures drop.",
+      "ribbon": "Columbia",
+      "price": 120.00,
       "currencyId": "USD",
       "currencyFormat": "$",
-      "isFreeShipping": true
+      "isInStock": true
+    },
+
+    {
+      "id": 11,
+      "sku": 9197907543445677,
+      "title": "Men’s Gate Racer™ Softshell Jacket",
+      "description": "Layer up comfortably with this stretchy, water-repellant, hooded softshell lined with cozy fleece and that's both breathable and built for mobility.",
+      "ribbon": "Columbia",
+      "price": 99.99,
+      "currencyId": "USD",
+      "currencyFormat": "$",
+      "isInStock": false
+    },
+
+    {
+      "id": 12,
+      "sku": 10547961582846888,
+      "title": "Leather Belt",
+      "description": "Silver-tone square buckle, Prong closure, 7 holes for adjustable sizing.",
+      "ribbon": "Original Penguin",
+      "price": 19.97,
+      "currencyId": "USD",
+      "currencyFormat": "$",
+      "isInStock": false
+    },
+
+    {
+      "id": 13,
+      "sku": 6090484789343891,
+      "title": "Men's Outdoor Casual Stand Collar Padded Vest Coats",
+      "description": "Nice looking warm vest is ideal to pair with tee shirts, heavy coats, jeans, sport pants, boots, or other casual wear for spring, fall or winter season.",
+      "ribbon": "Vcansion",
+      "price": 37.86,
+      "currencyId": "USD",
+      "currencyFormat": "$",
+      "isInStock": true
+    },
+
+    {
+      "id": 14,
+      "sku": 18532669286405342,
+      "title": "Men’s Loma Vista™ Hooded Jacket",
+      "description": "This fleece-lined jacket is made of a cotton-blend, water-resistant canvas with an internal ribbed collar for protection from the wind.",
+      "ribbon": "Columbia",
+      "price": 79.90,
+      "currencyId": "USD",
+      "currencyFormat": "$",
+      "isInStock": true
+    },
+
+    {
+      "id": 15,
+      "sku": 5619496040738316,
+      "title": "Men’s South Canyon™ Long Jacket",
+      "description": "Easy-going and durable, this jacket is waterproof-breathable and fully seam-sealed with a flannel lining for extra warmth.",
+      "ribbon": "Columbia",
+      "price": 150.00,
+      "currencyId": "USD",
+      "currencyFormat": "$",
+      "isInStock": false
+    },
+
+    {
+      "id": 16,
+      "sku": 11600983276356165,
+      "title": "Garment-Dyed Crewneck Sweater",
+      "description": "The perfect layer piece. This crewneck sweaters is crafted from 4-ply superfine cotton. Lightweight micro pique. 16-gage. Garment-dyed for sun washed aesthetic.",
+      "ribbon": "Brooks Brothers",
+      "price": 118.00,
+      "currencyId": "USD",
+      "currencyFormat": "$",
+      "isInStock": true
     }
   ]
 }

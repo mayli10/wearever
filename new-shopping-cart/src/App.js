@@ -1,15 +1,34 @@
 import React, { Component } from 'react';
 import './App.css';
-import products from './products.json';
-import PrimarySearchAppBar from './PrimarySearchAppBar.js'
+import ProductCard from './ProductCard.js';
+import PrimarySearchAppBar from './PrimarySearchAppBar.js';
 import Card from '@material-ui/core/Card';
+import { withStyles } from '@material-ui/core/styles';
+import PropTypes from 'prop-types';
+import products from './products.json';
+
+const styles = theme => ({
+  root: {
+  },
+  container: {
+    paddingTop: '20px',
+    display: 'flex',
+    justifyContent: 'space-evenly',
+  }
+
+})
 
 class App extends Component {
   render() {
-    console.log(products)
+    const { classes } = this.props;
+    console.log(products);
+
     return (
-      <div>
+      <div className={classes.root}>
         <PrimarySearchAppBar></PrimarySearchAppBar>
+        <div className={classes.container}>
+          <ProductCard></ProductCard>
+        </div>
       </div>
     );
   }
@@ -85,5 +104,4 @@ class FilterBar extends Component {
   }
 }
 
-export default App;
-//
+export default withStyles(styles)(App);

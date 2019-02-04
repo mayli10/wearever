@@ -16,7 +16,6 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import ShoppingCart from '@material-ui/icons/ShoppingCart';
 
-
 const styles = theme => ({
   bar: {
     background: 'linear-gradient(-20deg, #fc6076 0%, #ff9a44 100%)',
@@ -36,6 +35,7 @@ const styles = theme => ({
     [theme.breakpoints.up('sm')]: {
       display: 'block',
     },
+    fontSize: "40px",
     fontFamily: 'Staatliches',
   },
   search: {
