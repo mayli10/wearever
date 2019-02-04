@@ -34,6 +34,21 @@ import img1 from './images/cards/img1.png';
 // import img15 from './images/cards/img15.png';
 // import img16 from './images/cards/img16.png';
 
+// class MyComponent extends React.Component {
+//   // constructor(props) {
+//   //   super(props)
+//   // }
+//
+//   render() {
+//     return (
+//       <div>
+//         <h1>{this.props.name}</h1>
+//         <h2>{this.props.age}</h2>
+//       </div>
+//     );
+//   }
+// }
+
 const styles = theme => ({
   card: {
     maxWidth: 400,
@@ -64,23 +79,30 @@ const styles = theme => ({
   },
 });
 
-const prices = [], titles = [], descriptions = [], ribbons = [], imgs = [];
-
-const fillArrays = (products) => {
-  for (let i=0; i<products.length; i++) {
-    let p = "$" + products[i].price + ".00";
-    prices.push(p);
-    titles.push(products[i].title);
-    descriptions.push(products[i].description);
-    ribbons.push(products[i].ribbon);
-    let image = "img"+ products[i].id;
-    imgs.push(image);
-  }
-};
-fillArrays(products.products);
+// const prices = [], titles = [], descriptions = [], ribbons = [], imgs = [];
+//
+// const fillArrays = (products) => {
+//   for (let i=0; i<products.length; i++) {
+//     let p = "$" + products[i].price + ".00";
+//     prices.push(p);
+//     titles.push(products[i].title);
+//     descriptions.push(products[i].description);
+//     ribbons.push(products[i].ribbon);
+//     let image = "img"+ products[i].id;
+//     imgs.push(image);
+//   }
+// };
+// fillArrays(products.products);
 
 class ProductCard extends React.Component {
-  state = { expanded: false };
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      expanded: false,
+      displayedProducts: products.products
+    };
+  }
 
   handleExpandClick = () => {
     this.setState(state => ({ expanded: !state.expanded }));
@@ -97,8 +119,8 @@ class ProductCard extends React.Component {
               <MoreVertIcon />
             </IconButton>
           }
-          title={titles[0]}
-          subheader={ribbons[0]}
+          title={this.props.info.title}
+          subheader={this.props.info.ribbon}
         />
         <CardMedia
           className={classes.media}
@@ -114,7 +136,7 @@ class ProductCard extends React.Component {
             <ShoppingCart />
           </IconButton>
           <Typography className={classes.price} component="h6" variant="h6"
-           children={prices[0]}></Typography>
+           children={this.props.info.price}></Typography>
           <IconButton
             className={classnames(classes.expand, {
               [classes.expandOpen]: this.state.expanded,
@@ -130,7 +152,7 @@ class ProductCard extends React.Component {
         <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
           <CardContent>
             <Typography className={classes.description} component="p"
-              children={descriptions[0]}></Typography>
+              children={this.props.info.description}></Typography>
           </CardContent>
         </Collapse>
       </Card>

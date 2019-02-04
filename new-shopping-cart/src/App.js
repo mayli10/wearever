@@ -5,7 +5,6 @@ import PrimarySearchAppBar from './PrimarySearchAppBar.js';
 import Card from '@material-ui/core/Card';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
-import products from './products.json';
 
 const styles = theme => ({
   root: {
@@ -19,21 +18,55 @@ const styles = theme => ({
 })
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      expanded: false,
+      displayedProducts: []
+    };
+  }
+
+  componentDidMount() {
+    import('./products.json')
+    .then(json => {
+      this.setState({displayedProducts: json.products});
+    })
+  }
+
+  getProducts = () => {
+    const productComponents = []
+    for (let p of this.state.displayedProducts) {
+      productComponents.push(<ProductCard info={p} />);
+    }
+    return productComponents;
+  }
+
   render() {
     const { classes } = this.props;
-    console.log(products);
+    console.log(this.state.products);
 
     return (
       <div className={classes.root}>
-        <PrimarySearchAppBar></PrimarySearchAppBar>
+        <PrimarySearchAppBar/>
         <div className={classes.container}>
-          <ProductCard></ProductCard>
+          {this.getProducts()}
         </div>
       </div>
     );
   }
 }
 
+// <ProductCard productName="product1" />
+// <ProductCard productName="product2" />
+
+
+// new ProductCard("product1")
+//
+// ProductCard::ProductCard(productname) {
+//   string this.productname = productname;
+// }
+//
 class ProductCounter extends Component {
   render() {
     let productCount = 1;
