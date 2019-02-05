@@ -17,41 +17,11 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import products from './products.json';
 import ShoppingCart from '@material-ui/icons/ShoppingCart';
-import img1 from './images/cards/img1.png';
-// import img2 from './images/cards/img2.png';
-// import img3 from './images/cards/img3.png';
-// import img4 from './images/cards/img4.png';
-// import img5 from './images/cards/img5.png';
-// import img6 from './images/cards/img6.png';
-// import img7 from './images/cards/img7.png';
-// import img8 from './images/cards/img8.png';
-// import img9 from './images/cards/img9.png';
-// import img10 from './images/cards/img10.png';
-// import img11 from './images/cards/img11.png';
-// import img12 from './images/cards/img12.png';
-// import img13 from './images/cards/img13.png';
-// import img14 from './images/cards/img14.png';
-// import img15 from './images/cards/img15.png';
-// import img16 from './images/cards/img16.png';
-
-// class MyComponent extends React.Component {
-//   // constructor(props) {
-//   //   super(props)
-//   // }
-//
-//   render() {
-//     return (
-//       <div>
-//         <h1>{this.props.name}</h1>
-//         <h2>{this.props.age}</h2>
-//       </div>
-//     );
-//   }
-// }
+import Grid from '@material-ui/core/Grid';
 
 const styles = theme => ({
   card: {
-    maxWidth: 400,
+    width: 400,
   },
   media: {
     height: 150,
@@ -79,21 +49,6 @@ const styles = theme => ({
   },
 });
 
-// const prices = [], titles = [], descriptions = [], ribbons = [], imgs = [];
-//
-// const fillArrays = (products) => {
-//   for (let i=0; i<products.length; i++) {
-//     let p = "$" + products[i].price + ".00";
-//     prices.push(p);
-//     titles.push(products[i].title);
-//     descriptions.push(products[i].description);
-//     ribbons.push(products[i].ribbon);
-//     let image = "img"+ products[i].id;
-//     imgs.push(image);
-//   }
-// };
-// fillArrays(products.products);
-
 class ProductCard extends React.Component {
 
   constructor(props) {
@@ -112,50 +67,56 @@ class ProductCard extends React.Component {
     const { classes } = this.props;
 
     return (
-      <Card className={classes.card}>
-        <CardHeader
-          action={
-            <IconButton>
-              <MoreVertIcon />
-            </IconButton>
-          }
-          title={this.props.info.title}
-          subheader={this.props.info.ribbon}
-        />
-        <CardMedia
-          className={classes.media}
-          image={img1}
-          title="Product"
-          style={styles.media}
-        />
-        <CardActions className={classes.actions} disableActionSpacing>
-          <IconButton aria-label="Add to favorites">
-            <FavoriteIcon />
-          </IconButton>
-          <IconButton aria-label="Add to Cart">
-            <ShoppingCart />
-          </IconButton>
-          <Typography className={classes.price} component="h6" variant="h6"
-           children={this.props.info.price}></Typography>
-          <IconButton
-            className={classnames(classes.expand, {
-              [classes.expandOpen]: this.state.expanded,
-            })}
-            onClick={this.handleExpandClick}
-            aria-expanded={this.state.expanded}
-            aria-label="Show more"
-          >
-          <ExpandMoreIcon />
-          </IconButton>
-        </CardActions>
+      <Grid item xs={4}>
+        <Card className={classes.card}>
+          <CardHeader
+            action={
+              <IconButton>
+                <MoreVertIcon />
+              </IconButton>
+            }
+            title={this.props.info.title}
+            subheader={this.props.info.ribbon}
+          />
+          <CardMedia
+            className={classes.media}
+            image={require(`./images/cards/img${this.props.info.id}.png`)}
+            title="Product"
+            style={styles.media}
+          />
+          <CardActions className={classes.actions} disableActionSpacing>
 
-        <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
-          <CardContent>
-            <Typography className={classes.description} component="p"
-              children={this.props.info.description}></Typography>
-          </CardContent>
-        </Collapse>
-      </Card>
+            <IconButton aria-label="Add to favorites">
+              <FavoriteIcon />
+            </IconButton>
+
+            <IconButton aria-label="Add to Cart" onClick={()=>this.props.cartOnClick(this.props.info.id)}>
+              <ShoppingCart />
+            </IconButton>
+
+            <Typography className={classes.price} component="h6" variant="h6"
+             children={'$'+(this.props.info.price).toFixed(2)}></Typography>
+              <IconButton
+                className={classnames(classes.expand, {
+                  [classes.expandOpen]: this.state.expanded,
+                })}
+                onClick={this.handleExpandClick}
+                aria-expanded={this.state.expanded}
+                aria-label="Show more"
+              >
+              <ExpandMoreIcon />
+            </IconButton>
+
+          </CardActions>
+
+          <Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
+            <CardContent>
+              <Typography className={classes.description} component="p"
+                children={this.props.info.description}></Typography>
+            </CardContent>
+          </Collapse>
+        </Card>
+      </Grid>
 
     );
   }

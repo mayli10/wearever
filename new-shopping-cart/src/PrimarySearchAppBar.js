@@ -90,6 +90,9 @@ const styles = theme => ({
       display: 'none',
     },
   },
+  menuFooter: {
+    padding: '0 20px 0 20px',
+  },
 });
 
 class PrimarySearchAppBar extends React.Component {
@@ -98,7 +101,7 @@ class PrimarySearchAppBar extends React.Component {
     mobileMoreAnchorEl: null,
   };
 
-  handleShoppinCartOpen = event => {
+  handleShoppingCartOpen = event => {
     this.setState({ anchorEl: event.currentTarget });
   };
 
@@ -119,6 +122,27 @@ class PrimarySearchAppBar extends React.Component {
     this.setState({ mobileMoreAnchorEl: null });
   };
 
+  showShoppingCart = () => {
+    const cart = [];
+    for (let c of this.props.cartItems) {
+      cart.push(
+        <MenuItem key={c.id}>
+        <h5>{c.title}</h5>
+        <p>&nbsp;&nbsp;${c.price.toFixed(2)}</p>
+        </MenuItem>
+      );
+    }
+    return cart;
+  }
+
+  addShoppingCartPrices = () => {
+    let total = 0;
+    for (let c of this.props.cartItems) {
+      total += c.price;
+    }
+    return total;
+  }
+
   render() {
     const { anchorEl, mobileMoreAnchorEl } = this.state;
     const { classes } = this.props;
@@ -133,9 +157,11 @@ class PrimarySearchAppBar extends React.Component {
         open={isMenuOpen}
         onClose={this.handleMenuClose}
       >
-        <MenuItem onClick={this.handleMenuClose}>Profile</MenuItem>
-        <MenuItem onClick={this.handleMenuClose}>Account</MenuItem>
-        <MenuItem onClick={this.handleMenuClose}>Shopping Cart</MenuItem>
+        {this.showShoppingCart()}
+        <div className={classes.menuFooter}>
+          <p>{this.props.cartItems.length} item(s) in your cart.</p>
+          <p>Total Price: {'$'+(this.addShoppingCartPrices()).toFixed(2)}</p>
+        </div>
       </Menu>
     );
 
@@ -147,7 +173,7 @@ class PrimarySearchAppBar extends React.Component {
         open={isMobileMenuOpen}
         onClose={this.handleMenuClose}
       >
-        <MenuItem onClick={this.handleShoppinCartOpen}>
+        <MenuItem onClick={this.handleShoppingCartOpen}>
           <IconButton color="inherit">
             <ShoppingCart />
           </IconButton>
@@ -189,7 +215,7 @@ class PrimarySearchAppBar extends React.Component {
               <IconButton
                 aria-owns={isMenuOpen ? 'material-appbar' : undefined}
                 aria-haspopup="true"
-                onClick={this.handleShoppinCartOpen}
+                onClick={this.handleShoppingCartOpen}
                 color="inherit"
               >
                 <ShoppingCart />
@@ -197,9 +223,7 @@ class PrimarySearchAppBar extends React.Component {
             </div>
             <div className={classes.sectionDesktop}>
               <IconButton
-                aria-owns={isMenuOpen ? 'material-appbar' : undefined}
                 aria-haspopup="true"
-                onClick={this.handleProfileMenuOpen}
                 color="inherit"
               >
                 <AccountCircle />

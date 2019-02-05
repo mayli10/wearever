@@ -5,16 +5,23 @@ import PrimarySearchAppBar from './PrimarySearchAppBar.js';
 import Card from '@material-ui/core/Card';
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
 
 const styles = theme => ({
   root: {
+    flexGrow: 1,
   },
   container: {
-    paddingTop: '20px',
-    display: 'flex',
-    justifyContent: 'space-evenly',
+    paddingRight: '20px',
+    marginLeft: '20px',
+  },
+  productCount: {
+    fontSize: "25px",
+    fontFamily: 'Staatliches',
+    color: 'gray',
+    paddingLeft: '35px'
   }
-
 })
 
 class App extends Component {
@@ -23,7 +30,8 @@ class App extends Component {
     super(props);
     this.state = {
       expanded: false,
-      displayedProducts: []
+      displayedProducts: [],
+      shoppingCart: [],
     };
   }
 
@@ -33,105 +41,32 @@ class App extends Component {
       this.setState({displayedProducts: json.products});
     })
   }
+  addToCart = (id) => {
+    const cartItems = this.state.shoppingCart;
+    for (let p of this.state.displayedProducts) {
+      if (p.id === id) cartItems.push(p);
+    }
+    this.setState({shoppingCart: cartItems});
+  }
 
   getProducts = () => {
-    const productComponents = []
+    const productComponents = [];
     for (let p of this.state.displayedProducts) {
-      productComponents.push(<ProductCard info={p} />);
+      productComponents.push(<ProductCard key={p.id} info={p} cartOnClick={this.addToCart} />);
     }
     return productComponents;
   }
 
   render() {
     const { classes } = this.props;
-    console.log(this.state.products);
 
     return (
       <div className={classes.root}>
-        <PrimarySearchAppBar/>
-        <div className={classes.container}>
+        <PrimarySearchAppBar cartItems={this.state.shoppingCart}/>
+        <p className={classes.productCount}>{this.state.displayedProducts.length} products</p>
+        <Grid container spacing={24} className={classes.container}>
           {this.getProducts()}
-        </div>
-      </div>
-    );
-  }
-}
-
-// <ProductCard productName="product1" />
-// <ProductCard productName="product2" />
-
-
-// new ProductCard("product1")
-//
-// ProductCard::ProductCard(productname) {
-//   string this.productname = productname;
-// }
-//
-class ProductCounter extends Component {
-  render() {
-    let productCount = 1;
-    return (
-      <text>{productCount} Product(s) found.</text>
-    );
-  }
-}
-
-class FilterBar extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      showMenu: false,
-    };
-
-    this.showMenu = this.showMenu.bind(this);
-    this.closeMenu = this.closeMenu.bind(this);
-  }
-
-  showMenu(event) {
-    event.preventDefault();
-
-    this.setState({ showMenu: true }, () => {
-      document.addEventListener('click', this.closeMenu);
-    });
-  }
-
-  closeMenu(event) {
-
-    if (!this.dropdownMenu.contains(event.target)) {
-
-      this.setState({ showMenu: false }, () => {
-        document.removeEventListener('click', this.closeMenu);
-      });
-
-    }
-  }
-  render() {
-    return (
-      <div>
-      Filter
-        <button onClick={this.showMenu}>
-          Show menu
-        </button>
-
-        {
-          this.state.showMenu
-            ? (
-              <div
-                className="menu"
-                ref={(element) => {
-                  this.dropdownMenu = element;
-                }}
-              >
-                <button> Menu item 1 </button>
-                <button> Menu item 2 </button>
-                <button> Menu item 3 </button>
-              </div>
-            )
-            : (
-              null
-            )
-        }
+        </Grid>
       </div>
     );
   }
