@@ -1,75 +1,22 @@
-import React, { Component } from 'react';
-import './App.css';
-import ProductCard from './ProductCard.js';
-import PrimarySearchAppBar from './PrimarySearchAppBar.js';
-import Card from '@material-ui/core/Card';
-import { withStyles } from '@material-ui/core/styles';
-import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
+import React from 'react';
+import { Route, Link } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { ConnectedRouter } from 'connected-react-router';
 
-const styles = theme => ({
-  root: {
-    flexGrow: 1,
-  },
-  container: {
-    paddingRight: '20px',
-    marginLeft: '20px',
-  },
-  productCount: {
-    fontSize: "25px",
-    fontFamily: 'Staatliches',
-    color: 'gray',
-    paddingLeft: '35px'
-  }
-})
+import Home from './components/Home';
+import Counter from './modules/Counter/Container';
+import store, { history } from './store';
 
-class App extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      expanded: false,
-      displayedProducts: [],
-      shoppingCart: [],
-    };
-  }
-
-  componentDidMount() {
-    import('./products.json')
-    .then(json => {
-      this.setState({displayedProducts: json.products});
-    })
-  }
-  addToCart = (id) => {
-    const cartItems = this.state.shoppingCart;
-    for (let p of this.state.displayedProducts) {
-      if (p.id === id) cartItems.push(p);
-    }
-    this.setState({shoppingCart: cartItems});
-  }
-
-  getProducts = () => {
-    const productComponents = [];
-    for (let p of this.state.displayedProducts) {
-      productComponents.push(<ProductCard key={p.id} info={p} cartOnClick={this.addToCart} />);
-    }
-    return productComponents;
-  }
-
-  render() {
-    const { classes } = this.props;
-
-    return (
-      <div className={classes.root}>
-        <PrimarySearchAppBar cartItems={this.state.shoppingCart}/>
-        <p className={classes.productCount}>{this.state.displayedProducts.length} products</p>
-        <Grid container spacing={24} className={classes.container}>
-          {this.getProducts()}
-        </Grid>
+export default () => (
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <div>
+        <Link to="/">Home</Link>
+        <Link to="/counter">Counter</Link>
+        <hr />
+        <Route exact path="/" component={Home}/>
+        <Route exact path="/counter" component={Counter}/>
       </div>
-    );
-  }
-}
-
-export default withStyles(styles)(App);
+    </ConnectedRouter>
+  </Provider>
+);
