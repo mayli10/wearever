@@ -4,8 +4,17 @@ import classNames from 'classnames';
 import Home from '../../components/Home';
 import styles from './Counter.module.css';
 import productImage from '../../images/cards/img1.png';
+import TextInput from '../../components/TextInput';
 
-export const Counter = ({ count, increment }) => (
+export const Counter = ({
+  todoId,
+  getTodo,
+  todoValueChange,
+  todoData,
+  count,
+  increment,
+  loadingTodo
+}) => (
   <div>
     <h2>Counter</h2>
     <div>
@@ -39,6 +48,14 @@ export const Counter = ({ count, increment }) => (
       </span>
       <Home />
       <img src={productImage} alt="Product" className={styles.img} />
+      <hr />
+      <TextInput
+        value={todoId}
+        onChange={({ value }) => todoValueChange(value)}
+      />
+      <button type="submit" onClick={() => getTodo()}>Get Todo Info</button>
+      {loadingTodo && `Loading todo ${todoId}`}
+      {todoData && todoData.title}
     </div>
   </div>
 );

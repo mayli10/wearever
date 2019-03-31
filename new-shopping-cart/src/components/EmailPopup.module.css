@@ -1,0 +1,30 @@
+.container {
+  color: white;
+  background-color: black;
+  padding: 18px;
+  position: relative;
+  text-align: center;
+}
+
+.text {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.text:active {
+  color: grey;
+}
+
+.cross-button {
+  position: absolute;
+  padding: 16px 18px 18px;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.cross-button:active {
+  color: grey;
+}

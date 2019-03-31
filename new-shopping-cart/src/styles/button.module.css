@@ -1,0 +1,15 @@
+.btn {
+  border: none;
+  color: black;
+  padding: 8px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.signup-btn {
+  color: white;
+  background-color: #7A4938;
+  text-decoration: none;
+}

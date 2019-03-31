@@ -5,12 +5,14 @@ import { createBrowserHistory as createHistory } from 'history';
 import { combineReducers } from 'redux';
 
 import counter from './modules/Counter/reducer';
+import navbar from './modules/NavBar/reducer';
 
 export const history = createHistory();
 
 const rootReducer = combineReducers({
   counter,
-  router: connectRouter(history)
+  navbar,
+  router: connectRouter(history),
 });
 
 const initialState = {};
