@@ -19,16 +19,16 @@
           "id": "grey-small",
           "options": {
             "color": "Grey",
-            "size": "Small",
+            "size": "Small"
           },
           "images": ["http://localhost:3001/images/products/grey-coat.png"],
           "inStock": true
-        }
+        },
         {
           "id": "camel-medium",
           "options": {
             "color": "Camel",
-            "size": "Medium",
+            "size": "Medium"
           },
           "images": ["http://localhost:3001/images/products/camel-coat.png"],
           "inStock": true
@@ -64,19 +64,19 @@
           "id": "ivory-small",
           "options": {
             "color": "Ivory",
-            "size": "Small",
+            "size": "Small"
           },
           "images": [
             "http://localhost:3001/images/products/ivory-dress-front.png",
             "http://localhost:3001/images/products/ivory-dress-back.png"
           ],
           "inStock": true
-        }
+        },
         {
           "id": "ivory-large",
           "options": {
             "color": "Ivory",
-            "size": "Large",
+            "size": "Large"
           },
           "images": [
             "http://localhost:3001/images/products/ivory-dress-front.png",

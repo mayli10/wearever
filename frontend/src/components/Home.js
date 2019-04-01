@@ -1,7 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import Cookies from 'js-cookie';
-import ProductList from '../modules/Products/ProductList/Component.js';
+import React from 'react';
+import ProductList from '../modules/Products/ProductList/Container.js';
 
 export const Home = () => (
   <div>

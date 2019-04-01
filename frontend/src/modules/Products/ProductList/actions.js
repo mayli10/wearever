@@ -13,5 +13,6 @@ export const getProducts = () => (dispatch, getState) => {
   dispatch(loadProducts());
   fetch('http://localhost:3001/data/products.json')
     .then(response => response.json())
-    .then(products => dispatch(displayProducts(products)))
+    .then(products => dispatch(displayProducts(products.products)))
+    .catch(console.error);
 };
