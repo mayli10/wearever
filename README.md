@@ -1,2 +1,2 @@
-# shopping-cart-react
-A shopping cart React app!
+# Wearever
+Our website 1.0
