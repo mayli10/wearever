@@ -1,11 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 
-import Home from '../../components/Home';
+import Home from '../../../components/Home';
 import styles from './ProductList.module.css';
-import buttonStyles from '../../styles/button.module.css';
-import layoutStyles from '../../styles/layout.module.css';
+import buttonStyles from '../../../styles/button.module.css';
+import layoutStyles from '../../../styles/layout.module.css';
 
 class ProductList extends Component {
   componentDidMount() {

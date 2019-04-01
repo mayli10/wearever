@@ -6,7 +6,7 @@ import { combineReducers } from 'redux';
 
 import counter from './modules/Counter/reducer';
 import navbar from './modules/NavBar/reducer';
-import productList from './modules/ProductList/reducer';
+import productList from './modules/Products/ProductList/reducer';
 
 
 export const history = createHistory();
