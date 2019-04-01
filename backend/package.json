@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "build": "rimraf dist/ && babel ./src/ -d dist/",
-    "start": "npm run build && node ./dist/start.js"
+    "start": "node ./src/start.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
@@ -12,11 +11,5 @@
     "express": "~4.16.0",
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.2.3",
-    "@babel/core": "^7.4.0",
-    "@babel/preset-env": "^7.4.2",
-    "rimraf": "^2.6.1"
   }
 }
