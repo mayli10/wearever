@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import styles from './NavBar.module.css';
 import buttonStyles from '../../styles/button.module.css';
-import dropdownArrow from '../../images/dropdown-arrow.png';
-import logo from '../../images/logo.png';
+import dropdownArrow from '../../images/icons/dropdown-arrow.png';
+import logo from '../../images/icons/logo.png';
 import layoutStyles from '../../styles/layout.module.css';
 
 export const NavBar = ({
@@ -38,7 +38,7 @@ export const NavBar = ({
         </div>
       </div>
       <div className={styles['signup-btn-wrapper']}>
-        <Link to="/signup" className={classNames(buttonStyles.btn, buttonStyles['signup-btn'], styles['signup-btn'])}>Sign Up</Link>
+        <Link to="/signup" className={classNames(buttonStyles.btn, buttonStyles['styled-btn'], styles['signup-btn'])}>Sign Up</Link>
       </div>
     </div>
   </div>

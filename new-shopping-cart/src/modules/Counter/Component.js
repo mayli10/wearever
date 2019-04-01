@@ -3,7 +3,6 @@ import classNames from 'classnames';
 
 import Home from '../../components/Home';
 import styles from './Counter.module.css';
-import productImage from '../../images/cards/img1.png';
 import TextInput from '../../components/TextInput';
 
 export const Counter = ({
@@ -47,7 +46,6 @@ export const Counter = ({
         Greater than 0
       </span>
       <Home />
-      <img src={productImage} alt="Product" className={styles.img} />
       <hr />
       <TextInput
         value={todoId}

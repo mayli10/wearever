@@ -1,16 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
-import styles from './NavBar.module.css';
+import styles from './SideBar.module.css';
 import buttonStyles from '../../styles/button.module.css';
-import dropdownArrow from '../../images/dropdown-arrow.png';
-import logo from '../../images/logo.png';
+import whiteDropdownArrow from '../../images/icons/white-dropdown-arrow.png';
 import layoutStyles from '../../styles/layout.module.css';
 
 export const SideBar = ({
-  destination,
   dropdownOpen,
-  changeDestination,
   openDropdown,
   closeDropdown,
 }) => (
@@ -24,7 +21,7 @@ export const SideBar = ({
       <div className={styles['dropdown-wrapper']}>
         <div className={styles.dropdown}>
           <div className={styles['dropdown-label']} onClick={() => dropdownOpen ? closeDropdown() : openDropdown()}>
-            <img src={dropdownArrow} alt="Select a destination" className={styles['dropdown-icon']}/>
+            <img src={whiteDropdownArrow} alt="Select a destination" className={styles['dropdown-icon']}/>
             <span>Explore other destinations</span>
           </div>
 
