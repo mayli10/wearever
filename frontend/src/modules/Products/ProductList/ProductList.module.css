@@ -2,6 +2,10 @@
   display: flex;
   flex-direction: row;
 }
+
+.imgContainer {
+}
+
 .img {
   width: 200px;
   height: 320px;
@@ -24,7 +28,9 @@
   cursor: pointer;
 }
 
-.prices {
+.heartButton {
+  width: 20px;
+  height: auto;
 }
 
 .infoSection {
