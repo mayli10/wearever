@@ -65,7 +65,7 @@
         {
           "id": "black-small",
           "options": {
-            "color": "Ivory",
+            "color": "Black",
             "size": "Small"
           },
           "images": [
@@ -77,7 +77,7 @@
         {
           "id": "black-large",
           "options": {
-            "color": "Ivory",
+            "color": "Black",
             "size": "Large"
           },
           "images": [
@@ -98,6 +98,112 @@
       "defaultImages": [
         "http://localhost:3001/images/products/black-dress-front.png",
         "http://localhost:3001/images/products/black-dress-back.png"
+      ]
+    },
+    {
+      "sku": "53013994212072653",
+      "title": "White Josie Dress",
+      "description": "Forget LBDs and say hello to the perfect LWD. This Cinq à Sept style has a bodycon silhouette with a subtle crossover design that hugs every curve. We love it with classic accessories like the Silver Lug Cuff by Shinola.",
+      "details": "<li>Lined.</li><li>Self: 96% Polyester, 4% Spandex.</li><li>Lining: 100% Polyester.</li><li>Hand Wash Cold.</li><li>Imported.</li>",
+      "designer": "Cinq à Sept",
+      "msrp": 38500,
+      "currencyId": "USD",
+      "tags": ["sightseeing", "landmark", "dining", "night-out", "bridal-shower", "date"],
+      "prices": {
+        "3": 4000,
+        "5": 6000,
+        "purchase": 30000
+      },
+      "variants": [
+        {
+          "id": "white-medium",
+          "options": {
+            "color": "White",
+            "size": "Small"
+          },
+          "images": [
+            "http://localhost:3001/images/products/white-dress-front.png",
+            "http://localhost:3001/images/products/white-dress-back.png"
+          ],
+          "inStock": true
+        },
+        {
+          "id": "white-extra-large",
+          "options": {
+            "color": "White",
+            "size": "Large"
+          },
+          "images": [
+            "http://localhost:3001/images/products/white-dress-front.png",
+            "http://localhost:3001/images/products/white-dress-back.png"
+          ],
+          "inStock": true
+        }
+      ],
+      "optionTypes": [
+        {
+          "size": "Size"
+        },
+        {
+          "color": "Color"
+        }
+      ],
+      "defaultImages": [
+        "http://localhost:3001/images/products/white-dress-front.png",
+        "http://localhost:3001/images/products/white-dress-back.png"
+      ]
+    },
+    {
+      "sku": "65352120723013994",
+      "title": "Delicate Jumpsuit",
+      "description": "This menswear-inspired Iro jumpsuit, complete with sharp lapels and tailored trousers, offers a chic feminine look. Style it with Sondra Roberts' Black Marble Minaudiere.",
+      "details": "<li>Lined.</li><li>Self: 96% Polyester, 4% Spandex.</li><li>Lining: 100% Polyester.</li><li>Hand Wash Cold.</li><li>Imported.</li>",
+      "designer": "Iro",
+      "msrp": 71000,
+      "currencyId": "USD",
+      "tags": ["sightseeing", "landmark", "dining", "night-out", "bridal-shower", "date", "night-out", "work", "wedding"],
+      "prices": {
+        "3": 6000,
+        "5": 8000,
+        "purchase": 65000
+      },
+      "variants": [
+        {
+          "id": "black-small",
+          "options": {
+            "color": "Black",
+            "size": "Small"
+          },
+          "images": [
+            "http://localhost:3001/images/products/black-jumpsuit-front.png",
+            "http://localhost:3001/images/products/black-jumpsuit-back.png"
+          ],
+          "inStock": true
+        },
+        {
+          "id": "black-medium",
+          "options": {
+            "color": "Black",
+            "size": "Medium"
+          },
+          "images": [
+            "http://localhost:3001/images/products/black-jumpsuit-front.png",
+            "http://localhost:3001/images/products/black-jumpsuit-back.png"
+          ],
+          "inStock": true
+        }
+      ],
+      "optionTypes": [
+        {
+          "size": "Size"
+        },
+        {
+          "color": "Color"
+        }
+      ],
+      "defaultImages": [
+        "http://localhost:3001/images/products/black-jumpsuit-front.png",
+        "http://localhost:3001/images/products/black-jumpsuit-back.png"
       ]
     }
   ]
