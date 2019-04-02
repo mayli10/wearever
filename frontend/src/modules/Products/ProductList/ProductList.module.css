@@ -1,4 +1,32 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
 .img {
   width: 250px;
-  height: auto;
+  height: 400px;
+  padding: 25px;
+}
+
+.designer {
+  color: #7A4938;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.title {
+  color: #A9A9A9;
+  cursor: pointer;
+}
+
+.msrp {
+  color: #7A4938;
+  cursor: pointer;
+}
+
+.prices {
+}
+
+.infoSection {
+  padding: 0px 25px 25px;
 }

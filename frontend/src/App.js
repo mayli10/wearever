@@ -16,10 +16,7 @@ export default () => (
       <div>
         <EmailPopup/>
         <NavBar/>
-        <Link to="/">Home</Link>
-        <Link to="/counter">Counter</Link>
         <Route exact path="/" component={Home}/>
-        <Route exact path="/counter" component={Counter}/>
         <Route exact path="/signup" component={() => <div>signup page</div>}/>
       </div>
     </ConnectedRouter>

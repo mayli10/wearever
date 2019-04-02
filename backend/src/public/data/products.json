@@ -49,8 +49,10 @@
     },
     {
       "sku": "19421207353092604",
-      "title": "Textured Sheath Dress",
+      "title": "Mahogany Dress",
       "description": "A versatile design and easy-wear stretch fabric make this sophisticated sheath dress a favorite for days at the office and nights on the town. Complete with unique detailing at the waist.",
+      "details": "<li>Lined.</li><li>Self: 96% Polyester, 4% Spandex.</li><li>Lining: 100% Polyester.</li><li>Hand Wash Cold.</li><li>Imported.</li>",
+      "designer": "ELLIATT",
       "msrp": 6900,
       "currencyId": "USD",
       "tags": ["sightseeing", "landmark", "dining", "night-out"],
@@ -61,26 +63,26 @@
       },
       "variants": [
         {
-          "id": "ivory-small",
+          "id": "black-small",
           "options": {
             "color": "Ivory",
             "size": "Small"
           },
           "images": [
-            "http://localhost:3001/images/products/ivory-dress-front.png",
-            "http://localhost:3001/images/products/ivory-dress-back.png"
+            "http://localhost:3001/images/products/black-dress-front.png",
+            "http://localhost:3001/images/products/black-dress-back.png"
           ],
           "inStock": true
         },
         {
-          "id": "ivory-large",
+          "id": "black-large",
           "options": {
             "color": "Ivory",
             "size": "Large"
           },
           "images": [
-            "http://localhost:3001/images/products/ivory-dress-front.png",
-            "http://localhost:3001/images/products/ivory-dress-back.png"
+            "http://localhost:3001/images/products/black-dress-front.png",
+            "http://localhost:3001/images/products/black-dress-back.png"
           ],
           "inStock": true
         }
@@ -94,8 +96,8 @@
         }
       ],
       "defaultImages": [
-        "http://localhost:3001/images/products/ivory-dress-front.png",
-        "http://localhost:3001/images/products/ivory-dress-back.png"
+        "http://localhost:3001/images/products/black-dress-front.png",
+        "http://localhost:3001/images/products/black-dress-back.png"
       ]
     }
   ]
