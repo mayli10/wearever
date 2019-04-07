@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 import styles from './ProductList.module.css';
 
@@ -19,10 +20,12 @@ class ProductList extends Component {
               src={ product.defaultImages[0] }
               onMouseOver={e => (e.currentTarget.src = product.defaultImages[1])}
               onMouseOut={e => (e.currentTarget.src = product.defaultImages[0])}/>
+              {/* All of these local host calls need to be changed. 
+              Instead of accessing the folders make API calls to the backend to receive the images */}
               <img className={styles.heartButton}
-              src="http://localhost:3001/images/icons/empty-heart.png"
-              onMouseOver={e => (e.currentTarget.src = "http://localhost:3001/images/icons/colored-heart.png")}
-              onMouseOut={e => (e.currentTarget.src = "http://localhost:3001/images/icons/empty-heart.png")}/>
+              src="http://localhost:3001/get_image/icons/empty-heart.png"
+              onMouseOver={e => (e.currentTarget.src = "http://localhost:3001/get_image/icons/colored-heart.png")}
+              onMouseOut={e => (e.currentTarget.src = "http://localhost:3001/get_image/icons/empty-heart.png")}/>
             </div>
             <div className={styles.infoSection}>
               <div className={styles.designer}>{ product.designer.toUpperCase() }</div>
