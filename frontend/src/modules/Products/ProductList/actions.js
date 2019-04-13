@@ -12,17 +12,18 @@ export const displayProducts = products => ({
 
 export const getProducts = () => (dispatch, getState) => {
   dispatch(loadProducts());
-  axios.get('http://localhost:3001/product_data')
-    .then (function (response) {
-      console.log(response);
-    })
-    .then(response => response.json())
-    .then(products => dispatch(displayProducts(products.products)))
-    .catch(console.error);
-
-  // fetch('http://localhost:3001/product_data')
+  // Seongsik
+  // axios.get('http://localhost:3001/product_data')
+  //   .then (function (response) {
+  //     console.log(response);
+  //   })
   //   .then(response => response.json())
   //   .then(products => dispatch(displayProducts(products.products)))
+  //   .catch(console.error);
+
+  fetch('http://localhost:3001/product_data')
+    .then(response => response.json())
+    .then(products => dispatch(displayProducts(products.products)))
 };
 
 // export const load_quiz = (whereto) => {
