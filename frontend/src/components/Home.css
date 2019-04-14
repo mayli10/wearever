@@ -1,0 +1,38 @@
+.full-container {
+  display: flex;
+}
+
+.first-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.beach-girl {
+  height: 30%;
+  width: 15%;
+}
+
+.luggage {
+  height: 15%;
+  width: 30%;
+}
+
+.selfie {
+  height: 15%;
+  width: 30%;
+}
+
+.beach {
+  height: 30%;
+  width: 15%;
+}
+
+.walk {
+  height: 15%;
+  width: 30%;
+}
+
+.building {
+  height: 30%;
+  width: 15%;
+}

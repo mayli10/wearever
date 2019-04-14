@@ -1,0 +1,126 @@
+.outer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inner-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  padding: 33px 20px;
+}
+
+.input {
+  text-align: center;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-size: 15px;
+  padding: 10px 0px;
+  width: 170px;
+  border-style: solid;
+  border-color: grey;
+  border-width: 1px;
+}
+
+.input-container-calendar {
+  display: flex;
+  flex-direction: row;
+  height: 35px;
+  padding: 33px 20px 0px;
+}
+
+.input-calendar {
+  text-align: center;
+  font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+  font-size: 15px;
+  padding: 10px 0px;
+  width: 170px;
+  border-style: solid;
+  border-color: grey;
+  border-width: 1px;
+}
+
+.calendar-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.calendar {
+  width: 20px;
+  height: 19px;
+  padding:8px;
+  background-color: #7A4938;
+}
+
+.calendar-subtitle {
+  font-size: 11px;
+  color: grey;
+  width: 210px;
+  padding: 5px 20px 0px;
+  margin: 0px;
+}
+
+.clothes-hanger {
+  width: 25px;
+  height: 19px;
+  padding: 8px;
+  background-color: #7A4938;
+}
+
+.magnifying-glass {
+  width: 20px;
+  height: 19px;
+  padding: 8px;
+  background-color: #7A4938;
+}
+
+.icons-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.filter-button-container {
+  padding: 10px 20px 0px 10px;
+
+}
+
+.filter-button {
+  background-color: #7A4938;
+  padding: 8px;
+  width: 25px;
+  height: auto;
+}
+
+.heart-container {
+  text-align: center;
+  padding: 10px 20px 0px 10px;
+}
+
+.heart-subtitle {
+  font-size: 11px;
+}
+
+.heart {
+  width: 25px;
+  height: auto;
+}
+
+.box-container {
+  text-align: center;
+  padding: 9px 20px 0px 0px;
+}
+
+.box {
+  width: 25px;
+  height: auto;
+}
+
+.box-subtitle {
+  font-size: 11px;
+}
