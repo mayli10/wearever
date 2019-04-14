@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import axios from 'axios';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styles from './ProductList.module.css';
 
 class ProductList extends Component {
@@ -30,6 +31,14 @@ class ProductList extends Component {
               <span className={styles.msrp}>${ product.msrp / 100 } retail</span>
               <span className={styles.prices}> | starting from ${ product.prices["3"] / 100 }</span>
             </div>
+            <Link to={`/Product/${product.sku}`}>
+              <div className={styles.infoSection}>
+                <div className={styles.designer}>{ product.designer.toUpperCase() }</div>
+                <div className={styles.title}>{ product.title }</div>
+                <span className={styles.msrp}>${ product.msrp / 100 } retail</span>
+                <span className={styles.prices}> | starting from ${ product.prices["3"] / 100 }</span>
+              </div>
+            </Link>
           </div>
         )}
       </div>
