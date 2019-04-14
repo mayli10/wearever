@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
-import AppStyles from './App.css';
+import './App.css';
 import classNames from 'classnames';
 
 // import { ReactComponent as Logo } from './images/logo.svg';
@@ -20,11 +20,13 @@ export default () => (
       <div>
         <EmailPopup/>
         <NavBar/>
-        <div className={classNames(AppStyles['outer-container'])}>
-          <FilterBar/>
+        <div className='main-container'>
           <SideBar/>
+          <div>
+            <FilterBar/>
+            <Route exact path="/" component={Home}/>
+          </div>
         </div>
-        <Route exact path="/" component={Home}/>
         <Route exact path="/signup" component={() => <div>signup page</div>}/>
       </div>
     </ConnectedRouter>

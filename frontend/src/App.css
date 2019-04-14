@@ -1,8 +1,4 @@
-.outer-container {
-  flex-direction: column;
-
-}
-
-.inner-container {
-
+.main-container {
+  display: flex;
+  flex-direction: row;
 }
