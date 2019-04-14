@@ -14,22 +14,28 @@ export const FilterBar = ({
   closeDropdown
 }) => (
   <div className={styles['outer-container']}>
-    <div className={styles['calendar-container']}>
-      <div className={styles['input-container-calendar']}>
-        <input type="text" placeholder="Travel Date" className={styles['input-calendar']}/>
-        <img className={styles['calendar']} src="http://localhost:3001/images/icons/calendar.png"/>
+    <div className={styles['inner-container']}>
+      <div className={styles['calendar-container']}>
+        <div className={styles['input-container-calendar']}>
+          <input type="text" placeholder="Travel Date" className={styles['input-calendar']}/>
+          <img className={styles['calendar']} src="http://localhost:3001/images/icons/calendar.png"/>
+        </div>
+        <p className={styles['calendar-subtitle']}>Enter your travel dates to estimate the local weather for your trip!</p>
       </div>
-      <p className={styles['calendar-subtitle']}>Enter your travel dates to estimate the local weather for your trip!</p>
+      <div className={styles['input-container']}>
+        <input type="text" placeholder="Size" className={styles['input']}/>
+        <img className={styles['clothes-hanger']} src="http://localhost:3001/images/icons/clothes-hanger.png"/>
+      </div>
+      <div className={styles['input-container']}>
+        <input type="text" placeholder="Search" className={styles['input']}/>
+        <img className={styles['magnifying-glass']} src="http://localhost:3001/images/icons/magnifying-glass.png"/>
+      </div>
     </div>
-    <div className={styles['input-container']}>
-      <input type="text" placeholder="Size" className={styles['input']}/>
-      <img className={styles['clothes-hanger']} src="http://localhost:3001/images/icons/clothes-hanger.png"/>
-    </div>
-    <div className={styles['input-container']}>
-      <input type="text" placeholder="Search" className={styles['input']}/>
-      <img className={styles['magnifying-glass']} src="http://localhost:3001/images/icons/magnifying-glass.png"/>
-    </div>
+
     <div className={styles['icons-container']}>
+      <div className={styles['filter-button-container']}>
+        <img className={styles['filter-button']} src="http://localhost:3001/images/icons/filter-button.png"/>
+      </div>
       <div className={styles['heart-container']}>
         <img className={styles['heart']}
         src="http://localhost:3001/images/icons/empty-heart.png"
