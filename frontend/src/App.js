@@ -9,6 +9,7 @@ import Home from './components/Home';
 import EmailPopup from './components/EmailPopup';
 import NavBar from './modules/NavBar/Container';
 import Counter from './modules/Counter/Container';
+import ProductPage from './components/ProductPage'
 import store, { history } from './store';
 
 export default () => (
@@ -19,7 +20,7 @@ export default () => (
         <NavBar/>
         <Route exact path="/" component={Home}/>
         <Route exact path="/signup" component={() => <SignUp/>}/>
-        <Route path="/product" component = {() => <div>product page</div>} />
+        <Route path="/product/:id" component = {ProductPage} />
       </div>
     </ConnectedRouter>
   </Provider>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styles from './ProductList.module.css';
 
 class ProductList extends Component {
@@ -21,7 +21,6 @@ class ProductList extends Component {
               onMouseOver={e => (e.currentTarget.src = product.defaultImages[1])}
               onMouseOut={e => (e.currentTarget.src = product.defaultImages[0])}
               alt={product.title}
-              onClick={e=> (console.log(e.detail()))}
               />
               {/* All of these local host calls need to be changed. 
               Instead of accessing the folders make API calls to the backend to receive the images */}
@@ -31,12 +30,14 @@ class ProductList extends Component {
               onMouseOut={e => (e.currentTarget.src = "http://localhost:3001/get_image/icons/empty-heart.png")}
               alt={styles.title}/>
             </div>
-            <div className={styles.infoSection}>
-              <div className={styles.designer}>{ product.designer.toUpperCase() }</div>
-              <div className={styles.title}>{ product.title }</div>
-              <span className={styles.msrp}>${ product.msrp / 100 } retail</span>
-              <span className={styles.prices}> | starting from ${ product.prices["3"] / 100 }</span>
-            </div>
+            <Link to={`/Product/${product.sku}`}>
+              <div className={styles.infoSection}>
+                <div className={styles.designer}>{ product.designer.toUpperCase() }</div>
+                <div className={styles.title}>{ product.title }</div>
+                <span className={styles.msrp}>${ product.msrp / 100 } retail</span>
+                <span className={styles.prices}> | starting from ${ product.prices["3"] / 100 }</span>
+              </div>
+            </Link>
           </div>
         )}
       </div>
