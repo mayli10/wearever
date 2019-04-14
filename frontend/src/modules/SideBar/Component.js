@@ -10,10 +10,14 @@ export const SideBar = ({
   closeDropdown,
 }) => (
   <div className={styles['outer-container']}>
-    <div className={classNames(buttonStyles.btn, buttonStyles['styled-btn'])}>Activities</div>
-    <div className={classNames(buttonStyles.btn, buttonStyles['styled-btn'])}>Sign Up</div>
-    <Link to="/about">About</Link>
-    <Link to="/contact-us">Contact Us</Link>
+    <div className={styles['button-container']}>
+      <div className={classNames(buttonStyles.btn, buttonStyles['styled-btn'])}>Activities</div>
+    </div>
+    <div className={styles['button-container']}>
+      <div className={classNames(buttonStyles.btn, buttonStyles['styled-btn'])}>Sign Up</div>
+    </div>
+    <Link to="/about" className={classNames(styles['button-container'], styles['text-style'])}>About</Link>
+    <Link to="/contact-us" className={classNames(styles['button-container'], styles['text-style'])}>Contact Us</Link>
   </div>
 );
 

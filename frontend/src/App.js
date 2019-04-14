@@ -23,7 +23,9 @@ export default () => (
         <div className='main-container'>
           <SideBar/>
           <div>
-            <FilterBar/>
+            <div className='filter-container'>
+              <FilterBar/>
+            </div>
             <Route exact path="/" component={Home}/>
           </div>
         </div>
