@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: row;
   border-left: 1px solid #DCDCDC;
-  margin: 30px 0 0 50px;
+  margin: 20px 0 0 50px;
 }
 
-.imgContainer {
+.img-container {
+  position: relative;
 }
 
 .img {
@@ -30,11 +31,14 @@
   cursor: pointer;
 }
 
-.heartButton {
+.heart {
   width: 20px;
   height: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-.infoSection {
+.info-section {
   padding: 0px 25px 25px;
 }
