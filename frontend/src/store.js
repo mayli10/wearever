@@ -3,10 +3,12 @@ import { connectRouter, routerMiddleware } from 'connected-react-router';
 import thunk from 'redux-thunk';
 import { createBrowserHistory as createHistory } from 'history';
 import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form'
 
 import counter from './modules/Counter/reducer';
 import navbar from './modules/NavBar/reducer';
 import productList from './modules/Products/ProductList/reducer';
+
 
 
 export const history = createHistory();
@@ -15,6 +17,7 @@ const rootReducer = combineReducers({
   counter,
   navbar,
   productList,
+  form: formReducer,
   router: connectRouter(history),
 });
 

@@ -1,10 +1,14 @@
-import React from 'react';
-import SignupForm from './modules/Signup-Form/Form'
+import React, { Component } from 'react';
+import SignupForm from '../modules/Signup-Form/Form'
 
-export const SignUp = () => (
-  <div>
-    <SignupForm/>
-  </div>
-);
+class SignUp extends Component {
+  submit = values => {
+    // print the form values to the console
+    console.log(values)
+  }
+  render() {
+    return <SignupForm onSubmit={this.submit} />
+  }
+}
 
-export default SignUp;
+export default SignUp

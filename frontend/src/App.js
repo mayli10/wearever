@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
-import SignupForm from './modules/Signup-Form/Form'
+import SignUp from './components/Signup'
 
 // import { ReactComponent as Logo } from './images/logo.svg';
 import Home from './components/Home';
@@ -18,7 +18,8 @@ export default () => (
         <EmailPopup/>
         <NavBar/>
         <Route exact path="/" component={Home}/>
-        <Route exact path="/signup" component={() => <SignupForm onSubmit={'Hello'}/>}/>
+        <Route exact path="/signup" component={() => <SignUp/>}/>
+        <Route path="/product" component = {() => <div>product page</div>} />
       </div>
     </ConnectedRouter>
   </Provider>

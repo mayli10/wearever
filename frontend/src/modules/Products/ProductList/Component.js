@@ -19,13 +19,17 @@ class ProductList extends Component {
               <img className={styles.img}
               src={ product.defaultImages[0] }
               onMouseOver={e => (e.currentTarget.src = product.defaultImages[1])}
-              onMouseOut={e => (e.currentTarget.src = product.defaultImages[0])}/>
+              onMouseOut={e => (e.currentTarget.src = product.defaultImages[0])}
+              alt={product.title}
+              onClick={e=> (console.log(e.detail()))}
+              />
               {/* All of these local host calls need to be changed. 
               Instead of accessing the folders make API calls to the backend to receive the images */}
               <img className={styles.heartButton}
               src="http://localhost:3001/get_image/icons/empty-heart.png"
               onMouseOver={e => (e.currentTarget.src = "http://localhost:3001/get_image/icons/colored-heart.png")}
-              onMouseOut={e => (e.currentTarget.src = "http://localhost:3001/get_image/icons/empty-heart.png")}/>
+              onMouseOut={e => (e.currentTarget.src = "http://localhost:3001/get_image/icons/empty-heart.png")}
+              alt={styles.title}/>
             </div>
             <div className={styles.infoSection}>
               <div className={styles.designer}>{ product.designer.toUpperCase() }</div>
