@@ -1,0 +1,30 @@
+.outer-container {
+  border-bottom: 1px solid #B8B8B8;
+}
+
+.inner-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.logo-wrapper {
+  flex: 0 0 120px;
+}
+
+.logo {
+  width: 50px;
+  height: auto;
+  display: block;
+  margin: 15px 0;
+}
+
+.empty {
+  flex-grow: 2;
+  flex-basis: 100%;
+}
+
+.signup-btn-wrapper {
+  flex: 0 0 120px;
+  text-align: right;
+}

@@ -1,0 +1,8 @@
+.main-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.filter-container {
+  margin-left: 50px;
+}
