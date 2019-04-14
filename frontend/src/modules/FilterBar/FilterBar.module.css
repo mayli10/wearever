@@ -74,6 +74,11 @@
   background-color: #7A4938;
 }
 
+.icons-container {
+  display: flex;
+  justify-content: space-between;
+}
+
 .heart-container {
   text-align: center;
   padding: 10px 40px 0px 10px;

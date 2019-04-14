@@ -29,16 +29,18 @@ export const FilterBar = ({
       <input type="text" placeholder="Search" className={styles['input']}/>
       <img className={styles['magnifying-glass']} src="http://localhost:3001/images/icons/magnifying-glass.png"/>
     </div>
-    <div className={styles['heart-container']}>
-      <img className={styles['heart']}
-      src="http://localhost:3001/images/icons/empty-heart.png"
-      onMouseOver={e => (e.currentTarget.src = "http://localhost:3001/images/icons/colored-heart.png")}
-      onMouseOut={e => (e.currentTarget.src = "http://localhost:3001/images/icons/empty-heart.png")}/>
-      <div className={styles['heart-subtitle']}>Liked</div>
-    </div>
-    <div className={styles['box-container']}>
-      <Link to="/box"><img src={boxButton} alt="Wearever Box" className={styles.box}/></Link>
-      <div className={styles['box-subtitle']}>My Box</div>
+    <div className={styles['icons-container']}>
+      <div className={styles['heart-container']}>
+        <img className={styles['heart']}
+        src="http://localhost:3001/images/icons/empty-heart.png"
+        onMouseOver={e => (e.currentTarget.src = "http://localhost:3001/images/icons/colored-heart.png")}
+        onMouseOut={e => (e.currentTarget.src = "http://localhost:3001/images/icons/empty-heart.png")}/>
+        <div className={styles['heart-subtitle']}>Liked</div>
+      </div>
+      <div className={styles['box-container']}>
+        <Link to="/box"><img src={boxButton} alt="Wearever Box" className={styles.box}/></Link>
+        <div className={styles['box-subtitle']}>My Box</div>
+      </div>
     </div>
   </div>
 );
