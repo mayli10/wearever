@@ -18,7 +18,7 @@ export const FilterBar = ({
       <div className={styles['calendar-container']}>
         <div className={styles['input-container-calendar']}>
           <input type="text" placeholder="Travel Date" className={styles['input-calendar']}/>
-          <img className={styles['calendar']} src="http://localhost:3001/get_icon/calendar.png"/>
+          <img className={styles['calendar']} src="http://localhost:3001/get_imagesb/calendar.png"/>
         </div>
         <p className={styles['calendar-subtitle']}>Enter your travel dates to estimate the local weather for your trip!</p>
       </div>
