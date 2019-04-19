@@ -1,12 +1,18 @@
 import React from 'react';
 import ProductPage from '../modules/Products/ProductPage/Component';
+import NavBar from '../modules/NavBar/Container';
+import SideBar from '../modules/SideBar/Container';
+
 
 export const Product = ({match}) => {
-    console.log(match);
+    const prodid = match.params.id
     return (
     <div>
-        <ProductPage/>
-        <h3>ID: {match.params.id}</h3>
+        <NavBar/>
+        <div className='main-container'>
+            <SideBar/>
+            <ProductPage product = {prodid}/>
+        </div>
     </div>
     )
   

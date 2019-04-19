@@ -8,6 +8,8 @@ import { reducer as formReducer } from 'redux-form'
 import counter from './modules/Counter/reducer';
 import navbar from './modules/NavBar/reducer';
 import productList from './modules/Products/ProductList/reducer';
+import productPage from './modules/Products/ProductPage/reducer';
+
 
 
 
@@ -18,6 +20,7 @@ const rootReducer = combineReducers({
   navbar,
   productList,
   form: formReducer,
+  productPage,
   router: connectRouter(history),
 });
 

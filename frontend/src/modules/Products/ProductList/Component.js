@@ -5,6 +5,7 @@ import styles from './ProductList.module.css';
 
 class ProductList extends Component {
   componentDidMount() {
+    console.log(this.props)
     this.props.getProducts();
   }
 
@@ -21,16 +22,16 @@ class ProductList extends Component {
               onMouseOver={e => (e.currentTarget.src = product.defaultImages[1])}
               onMouseOut={e => (e.currentTarget.src = product.defaultImages[0])}/>
               <img className={styles['heart']}
-              src="http://localhost:3001/images/icons/empty-heart.png"
-              onMouseOver={e => (e.currentTarget.src = "http://localhost:3001/images/icons/colored-heart.png")}
-              onMouseOut={e => (e.currentTarget.src = "http://localhost:3001/images/icons/empty-heart.png")}/>
+              src="http://localhost:3001/get_icon/empty-heart.png"
+              onMouseOver={e => (e.currentTarget.src = "http://localhost:3001/get_images/icons/colored-heart.png")}
+              onMouseOut={e => (e.currentTarget.src = "http://localhost:3001/get_images/icons/empty-heart.png")}/>
             </div>
-            <div className={styles['info-section']}>
+            {/* <div className={styles['info-section']}>
               <div className={styles.designer}>{ product.designer.toUpperCase() }</div>
               <div className={styles.title}>{ product.title }</div>
               <span className={styles.msrp}>${ product.msrp / 100 } retail</span>
               <span className={styles.prices}> | starting from ${ product.prices["3"] / 100 }</span>
-            </div>
+            </div> */}
             <Link to={`/Product/${product.sku}`}>
               <div className={styles.infoSection}>
                 <div className={styles.designer}>{ product.designer.toUpperCase() }</div>
