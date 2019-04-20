@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import styles from './ProductList.module.css';
+import emptyheart from '../../../images/icons/empty-heart.png';
+import coloredheart from '../../../images/icons/colored-heart.png';
 
 class ProductList extends Component {
   componentDidMount() {
@@ -22,9 +24,9 @@ class ProductList extends Component {
               onMouseOver={e => (e.currentTarget.src = product.defaultImages[1])}
               onMouseOut={e => (e.currentTarget.src = product.defaultImages[0])}/>
               <img className={styles['heart']}
-              src="http://localhost:3001/get_icon/empty-heart.png"
-              onMouseOver={e => (e.currentTarget.src = "http://localhost:3001/get_images/icons/colored-heart.png")}
-              onMouseOut={e => (e.currentTarget.src = "http://localhost:3001/get_images/icons/empty-heart.png")}/>
+              src={emptyheart}
+              onMouseOver={e => (e.currentTarget.src = {coloredheart})}
+              onMouseOut={e => (e.currentTarget.src = {emptyheart})}/>
             </div>
             {/* <div className={styles['info-section']}>
               <div className={styles.designer}>{ product.designer.toUpperCase() }</div>

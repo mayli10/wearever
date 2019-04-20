@@ -5,6 +5,13 @@ import styles from './FilterBar.module.css';
 import buttonStyles from '../../styles/button.module.css';
 import boxButton from '../../images/icons/boxButton.png';
 import layoutStyles from '../../styles/layout.module.css';
+import calendar from '../../images/icons/calendar.png';
+import hanger from '../../images/icons/clothes-hanger.png';
+import magnifyingGlass from '../../images/icons/magnifying-glass.png';
+import filterbutton from '../../images/icons/filter-button.png';
+import emptyheart from '../../images/icons/empty-heart.png';
+import coloredheart from '../../images/icons/colored-heart.png';
+
 
 export const FilterBar = ({
   selectDate,
@@ -18,29 +25,29 @@ export const FilterBar = ({
       <div className={styles['calendar-container']}>
         <div className={styles['input-container-calendar']}>
           <input type="text" placeholder="Travel Date" className={styles['input-calendar']}/>
-          <img className={styles['calendar']} src="http://localhost:3001/get_imagesb/calendar.png"/>
+          <img className={styles['calendar']} src={calendar}/>
         </div>
         <p className={styles['calendar-subtitle']}>Enter your travel dates to estimate the local weather for your trip!</p>
       </div>
       <div className={styles['input-container']}>
         <input type="text" placeholder="Size" className={styles['input']}/>
-        <img className={styles['clothes-hanger']} src="http://localhost:3001/get_images/icons/clothes-hanger.png"/>
+        <img className={styles['clothes-hanger']} src={hanger}/>
       </div>
       <div className={styles['input-container']}>
         <input type="text" placeholder="Search" className={styles['input']}/>
-        <img className={styles['magnifying-glass']} src="http://localhost:3001/get_images/icons/magnifying-glass.png"/>
+        <img className={styles['magnifying-glass']} src={magnifyingGlass}/>
       </div>
     </div>
 
     <div className={styles['icons-container']}>
       <div className={styles['filter-button-container']}>
-        <img className={styles['filter-button']} src="http://localhost:3001/get_images/icons/filter-button.png"/>
+        <img className={styles['filter-button']} src={filterbutton}/>
       </div>
       <div className={styles['heart-container']}>
         <img className={styles['heart']}
-        src="http://localhost:3001/images/icons/empty-heart.png"
-        onMouseOver={e => (e.currentTarget.src = "http://localhost:3001/get_images/icons/colored-heart.png")}
-        onMouseOut={e => (e.currentTarget.src = "http://localhost:3001/images/icons/empty-heart.png")}/>
+        src={emptyheart}
+        onMouseOver={e => (e.currentTarget.src = {coloredheart})}
+        onMouseOut={e => (e.currentTarget.src = {emptyheart})}/>
         <div className={styles['heart-subtitle']}>Liked</div>
       </div>
       <div className={styles['box-container']}>

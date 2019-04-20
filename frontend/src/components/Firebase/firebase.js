@@ -14,7 +14,7 @@ const config = {
   class Firebase {
     constructor() {
       app.initializeApp(config);
-      this.db = app.database();
+      //this.db = app.database();
     }
     product = uid => this.db.ref(`products/${uid}`);
     products = () => this.db.ref('products');
