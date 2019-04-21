@@ -48,8 +48,15 @@ class ProductPage extends Component {
                     </div>
                     <div className={styles.plain}>Product description</div>
                     <div className={styles.description}>{prod.description} </div>
+                    <div className={styles.description}>{prod.details} </div>
+                    <div className={styles.container}>
+                        <div className={styles.pricebox}> Add </div>
+                        <div className={styles.pricebox}> Check Out </div>
+
+                    </div>
                     {/* <span className={styles.prices}> | starting from ${ prod.prices["3"] / 100 }</span> */}
                 </div>
+
             </div>
         )
     }

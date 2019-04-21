@@ -34,7 +34,7 @@ class ProductList extends Component {
               <span className={styles.msrp}>${ product.msrp / 100 } retail</span>
               <span className={styles.prices}> | starting from ${ product.prices["3"] / 100 }</span>
             </div> */}
-            <Link to={`/Product/${product.sku}`}>
+            <Link to={`/Product/${product.sku}`} style={{ textDecoration: 'none' }}>
               <div className={styles.infoSection}>
                 <div className={styles.designer}>{ product.designer.toUpperCase() }</div>
                 <div className={styles.title}>{ product.title }</div>

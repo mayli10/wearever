@@ -1,0 +1,8 @@
+.flexin {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.shrinkin {
+    padding:3em;
+}

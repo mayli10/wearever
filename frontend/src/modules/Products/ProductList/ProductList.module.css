@@ -40,4 +40,9 @@
 
 .info-section {
   padding: 0px 25px 25px;
+  text-decoration: none;
+}
+
+.prices {
+  color: black;
 }
