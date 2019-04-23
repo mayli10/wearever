@@ -8,14 +8,14 @@ import layoutStyles from '../../styles/layout.module.css';
 import calendar from '../../images/icons/calendar.png';
 import hanger from '../../images/icons/clothes-hanger.png';
 import magnifyingGlass from '../../images/icons/magnifying-glass.png';
-import filterbutton from '../../images/icons/filter-button.png';
+import filterButton from '../../images/icons/filter-button.png';
 
 export const FilterBar = ({
-  selectDate,
   filterSize,
-  searchItem,
+  targetSize,
   openDropdown,
-  closeDropdown
+  closeDropdown,
+  dropdownOpen
 }) => (
   <div className={styles['outer-container']}>
     <div className={styles['inner-container']}>
@@ -27,8 +27,8 @@ export const FilterBar = ({
         <p className={styles['calendar-subtitle']}>Enter your travel dates to estimate the local weather for your trip!</p>
       </div>
       <div className={styles['input-container']}>
-        <input type="text" placeholder="Size (XS, S, M, L, XL)" className={styles['input']}/>
-        <img className={styles['clothes-hanger']} src={hanger}/>
+        <input type="text" placeholder="Size" className={styles['input']}/>
+        <img className={styles['clothes-hanger']} src={hanger} onClick={() => filterSize('Medium')}/>
       </div>
       <div className={styles['input-container']}>
         <input type="text" placeholder="Search" className={styles['input']}/>
@@ -37,9 +37,27 @@ export const FilterBar = ({
     </div>
 
     <div className={styles['icons-container']}>
+
       <div className={styles['filter-button-container']}>
-        <img className={styles['filter-button']} src={filterbutton}/>
+        <div className={styles['dropdown-wrapper']}>
+
+          <div className={styles.dropdown}>
+          <img className={styles['filter-button']} src={filterButton}
+          onClick={() => dropdownOpen ? closeDropdown() : openDropdown()}/>
+
+          <ul className={classNames({
+            [styles['dropdown-items']]: true,
+            [styles['dropdown-open']]: dropdownOpen,
+          })}>
+            <li className={styles['dropdown-item']}>Lowest Price First</li>
+            <li className={styles['dropdown-item']}>Highest Price First</li>
+            <li className={styles['dropdown-item']}>Most Popular</li>
+            <li className={styles['dropdown-item']}>Most Reviewed</li>
+          </ul>
+          </div>
+        </div>
       </div>
+
       <div className={styles['heart-container']}>
         <img className={styles['heart']}
         src="http://localhost:3001/get_image/icons/empty-heart.png"
@@ -47,17 +65,14 @@ export const FilterBar = ({
         onMouseOut={e => (e.currentTarget.src = "http://localhost:3001/get_image/icons/empty-heart.png")}/>
         <div className={styles['heart-subtitle']}>Liked</div>
       </div>
+
       <div className={styles['box-container']}>
         <Link to="/box"><img src={boxButton} alt="Wearever Box" className={styles.box}/></Link>
         <div className={styles['box-subtitle']}>My Box</div>
       </div>
+
     </div>
   </div>
 );
 
 export default FilterBar;
-
-// <img className={styles['heart']}
-// src={emptyheart}
-// onMouseOver={e => (e.currentTarget.src = {coloredheart})}
-// onMouseOut={e => (e.currentTarget.src = {emptyheart})}/>

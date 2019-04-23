@@ -1,20 +1,20 @@
 import * as actionTypes from './action-types';
 
-export const selectDate = targetDate => ({
-  type: actionTypes.selectDate,
-  targetDate
-});
+// export const selectDate = targetDate => ({
+//   type: actionTypes.selectDate,
+//   targetDate
+// });
 
-export const filterSize = targetSizes => ({
+export const filterSize = targetSize => ({
+  targetSize,
   type: actionTypes.filterSize,
-  targetSizes
 });
 
-export const searchItem = targetItem => ({
-  type: actionTypes.searchItem,
-  targetItem
-});
-
+// export const searchItem = targetItem => ({
+//   type: actionTypes.searchItem,
+//   targetItem
+// });
+//
 export const openDropdown = () => ({
   type: actionTypes.openDropdown,
 });

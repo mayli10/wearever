@@ -19,10 +19,17 @@ export const SideBar = ({
         [styles['dropdown-items']]: true,
         [styles['dropdown-open']]: dropdownOpen,
       })}>
-        <li className={styles['dropdown-item']} onClick={() => setTag('sightseeing')}>Sightseeing</li>
+        <li className={styles['dropdown-item']} onClick={() => setTag(null)}>All Activities</li>
+        <li className={styles['dropdown-item']} onClick={() => setTag('wedding')}>Wedding</li>
         <li className={styles['dropdown-item']} onClick={() => setTag('beach')}>Beach</li>
         <li className={styles['dropdown-item']} onClick={() => setTag('bridal-shower')}>Bridal Shower</li>
-        <li className={styles['dropdown-item']} onClick={() => setTag('bar')}>Bar</li>
+        <li className={styles['dropdown-item']} onClick={() => setTag('sightseeing')}>Sightseeing</li>
+        <li className={styles['dropdown-item']} onClick={() => setTag('dining')}>Dining</li>
+        <li className={styles['dropdown-item']} onClick={() => setTag('theme-park')}>Theme Park</li>
+        <li className={styles['dropdown-item']} onClick={() => setTag('night-out')}>Night Out</li>
+        <li className={styles['dropdown-item']} onClick={() => setTag('landmark')}>Landmark</li>
+        <li className={styles['dropdown-item']} onClick={() => setTag('work')}>Work</li>
+        <li className={styles['dropdown-item']} onClick={() => setTag('test')}>Test: Nothing</li>
       </ul>
     </div>
 

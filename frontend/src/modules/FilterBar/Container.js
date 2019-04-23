@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import FilterBar from './Component';
 import * as actions from './actions';
 
-export const mapStateToProps = state => state.filterbar;
+export const mapStateToProps = state => state.filterBar;
 
 export const mapDispatchToProps = dispatch =>
   bindActionCreators(actions, dispatch);

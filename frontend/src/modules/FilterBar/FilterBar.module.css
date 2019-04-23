@@ -71,6 +71,7 @@
   height: 19px;
   padding: 8px;
   background-color: #7A4938;
+  cursor: pointer;
 }
 
 .magnifying-glass {
@@ -125,4 +126,60 @@
 
 .box-subtitle {
   font-size: 11px;
+}
+
+.dropdown-wrapper {
+  flex-grow: 2;
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-icon {
+  width: 15px;
+  height: auto;
+  margin-right: 7px;
+}
+
+.dropdown-label {
+  color: grey;
+}
+
+.dropdown-items {
+  display: none;
+  width: 140px;
+  border: 1px solid #B8B8B8;
+  position: absolute;
+  top: calc(100% + 10px);
+  margin: 0;
+  padding: 20px;
+  left: 0;
+  text-align: left;
+  background-color: white;
+}
+
+.dropdown-item {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: 0;
+  margin-bottom: 5px;
+}
+
+.dropdown-item:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown-item:hover, .dropdown-label:hover {
+  color: #7A4938;
+  cursor: pointer;
+}
+
+.dropdown-open {
+  display: block;
 }
