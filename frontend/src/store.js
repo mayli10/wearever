@@ -6,18 +6,17 @@ import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form'
 
 import counter from './modules/Counter/reducer';
-import navbar from './modules/NavBar/reducer';
+import navBar from './modules/NavBar/reducer';
+import sideBar from './modules/SideBar/reducer';
 import productList from './modules/Products/ProductList/reducer';
 import productPage from './modules/Products/ProductPage/reducer';
-
-
-
 
 export const history = createHistory();
 
 const rootReducer = combineReducers({
   counter,
-  navbar,
+  navBar,
+  sideBar,
   productList,
   form: formReducer,
   productPage,

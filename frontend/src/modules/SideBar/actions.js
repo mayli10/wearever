@@ -7,3 +7,8 @@ export const openDropdown = () => ({
 export const closeDropdown = () => ({
   type: actionTypes.closeDropdown,
 })
+
+export const setTag = (tag) => ({
+  tag,
+  type: actionTypes.setTag,
+})
