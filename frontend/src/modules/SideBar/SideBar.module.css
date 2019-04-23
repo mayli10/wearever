@@ -18,3 +18,38 @@
   text-decoration: none;
   color: black;
 }
+
+.dropdown-items {
+  display: none;
+  color: grey;
+  width: 180px;
+  border: 1px solid #B8B8B8;
+  position: absolute;
+  top: calc(100% + 10px);
+  margin: 0;
+  padding: 20px;
+  left: 0;
+  text-align: left;
+  background-color: white;
+}
+
+.dropdown-item {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+  list-style-type: 0;
+  margin-bottom: 5px;
+}
+
+.dropdown-item:last-child {
+  margin-bottom: 0;
+}
+
+.dropdown-item:hover, .dropdown-label:hover {
+  color: #7A4938;
+  cursor: pointer;
+}
+
+.dropdown-open {
+  display: block;
+}
