@@ -9,9 +9,6 @@ import calendar from '../../images/icons/calendar.png';
 import hanger from '../../images/icons/clothes-hanger.png';
 import magnifyingGlass from '../../images/icons/magnifying-glass.png';
 import filterbutton from '../../images/icons/filter-button.png';
-import emptyheart from '../../images/icons/empty-heart.png';
-import coloredheart from '../../images/icons/colored-heart.png';
-
 
 export const FilterBar = ({
   selectDate,
@@ -30,7 +27,7 @@ export const FilterBar = ({
         <p className={styles['calendar-subtitle']}>Enter your travel dates to estimate the local weather for your trip!</p>
       </div>
       <div className={styles['input-container']}>
-        <input type="text" placeholder="Size" className={styles['input']}/>
+        <input type="text" placeholder="Size (XS, S, M, L, XL)" className={styles['input']}/>
         <img className={styles['clothes-hanger']} src={hanger}/>
       </div>
       <div className={styles['input-container']}>
@@ -45,9 +42,9 @@ export const FilterBar = ({
       </div>
       <div className={styles['heart-container']}>
         <img className={styles['heart']}
-        src={emptyheart}
-        onMouseOver={e => (e.currentTarget.src = {coloredheart})}
-        onMouseOut={e => (e.currentTarget.src = {emptyheart})}/>
+        src="http://localhost:3001/get_image/icons/empty-heart.png"
+        onMouseOver={e => (e.currentTarget.src = "http://localhost:3001/get_image/icons/colored-heart.png")}
+        onMouseOut={e => (e.currentTarget.src = "http://localhost:3001/get_image/icons/empty-heart.png")}/>
         <div className={styles['heart-subtitle']}>Liked</div>
       </div>
       <div className={styles['box-container']}>
@@ -59,3 +56,8 @@ export const FilterBar = ({
 );
 
 export default FilterBar;
+
+// <img className={styles['heart']}
+// src={emptyheart}
+// onMouseOver={e => (e.currentTarget.src = {coloredheart})}
+// onMouseOut={e => (e.currentTarget.src = {emptyheart})}/>

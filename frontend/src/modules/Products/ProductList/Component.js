@@ -24,9 +24,9 @@ class ProductList extends Component {
               onMouseOver={e => (e.currentTarget.src = product.defaultImages[1])}
               onMouseOut={e => (e.currentTarget.src = product.defaultImages[0])}/>
               <img className={styles['heart']}
-              src={emptyheart}
-              onMouseOver={e => (e.currentTarget.src = {coloredheart})}
-              onMouseOut={e => (e.currentTarget.src = {emptyheart})}/>
+              src="http://localhost:3001/get_image/icons/empty-heart.png"
+              onMouseOver={e => (e.currentTarget.src = "http://localhost:3001/get_image/icons/colored-heart.png")}
+              onMouseOut={e => (e.currentTarget.src = "http://localhost:3001/get_image/icons/empty-heart.png")}/>
             </div>
             {/* <div className={styles['info-section']}>
               <div className={styles.designer}>{ product.designer.toUpperCase() }</div>
@@ -48,5 +48,10 @@ class ProductList extends Component {
     );
   }
 }
+
+// <img className={styles['heart']}
+// src={emptyheart}
+// onMouseOver={e => (e.currentTarget.src = {coloredheart})}
+// onMouseOut={e => (e.currentTarget.src = {emptyheart})}/>
 
 export default ProductList;

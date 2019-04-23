@@ -91,6 +91,7 @@
 }
 
 .filter-button {
+  cursor: pointer;
   background-color: #7A4938;
   padding: 8px;
   width: 25px;
@@ -107,6 +108,7 @@
 }
 
 .heart {
+  cursor: pointer;
   width: 25px;
   height: auto;
 }
