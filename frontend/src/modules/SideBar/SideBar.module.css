@@ -19,25 +19,21 @@
   color: black;
 }
 
+.activities-button {
+  cursor: pointer;
+}
+
 .dropdown-items {
+  padding: 0;
   display: none;
-  color: grey;
-  width: 180px;
-  border: 1px solid #B8B8B8;
-  position: absolute;
-  top: calc(100% + 10px);
-  margin: 0;
-  padding: 20px;
-  left: 0;
-  text-align: left;
-  background-color: white;
+  text-align: center;
 }
 
 .dropdown-item {
+  list-style: none;
   margin: 0;
   padding: 0;
   text-indent: 0;
-  list-style-type: 0;
   margin-bottom: 5px;
 }
 

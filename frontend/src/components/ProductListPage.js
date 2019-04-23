@@ -5,7 +5,7 @@ import EmailPopup from './EmailPopup';
 import NavBar from '../modules/NavBar/Container';
 import FilterBar from '../modules/FilterBar/Container';
 import SideBar from '../modules/SideBar/Container';
-import ProductList from '../modules/Products/ProductList/Container.js';
+import ProductList from '../modules/Products/ProductList/Container';
 import './ProductListPage.css';
 
 export const ProductListPage = () => (

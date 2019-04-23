@@ -5,6 +5,10 @@ export const initialState = {
   tag: null,
 };
 
+//the reason we return Object.assign() which copies the state to an
+//empty obj and then we add the third param to the obj again is bc the state is
+//immutable, so we're not supposed to modify the state,
+//instead we return an updated state
 export default (state = initialState, action) => {
   switch (action.type) {
     case actionTypes.openDropdown:

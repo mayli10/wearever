@@ -13,24 +13,21 @@ export const SideBar = ({
 }) => (
   <div className={styles['outer-container']}>
     <div className={styles['button-container']}>
-      <div className={classNames(buttonStyles.btn, buttonStyles['styled-btn'])} onClick={() => dropdownOpen ? closeDropdown() : openDropdown()}>Activities</div>
+      <div className={classNames(buttonStyles.btn, buttonStyles['styled-btn'], styles['activities-button'])}
+      onClick={() => dropdownOpen ? closeDropdown() : openDropdown()}>Activities</div>
       <ul className={classNames({
         [styles['dropdown-items']]: true,
         [styles['dropdown-open']]: dropdownOpen,
       })}>
-        <ul className={styles['dropdown-item']}>Orlando</ul>
-        <ul className={styles['dropdown-item']}>New York City</ul>
+        <li className={styles['dropdown-item']} onClick={() => setTag('sightseeing')}>Sightseeing</li>
+        <li className={styles['dropdown-item']} onClick={() => setTag('beach')}>Beach</li>
+        <li className={styles['dropdown-item']} onClick={() => setTag('bridal-shower')}>Bridal Shower</li>
+        <li className={styles['dropdown-item']} onClick={() => setTag('bar')}>Bar</li>
       </ul>
     </div>
+
     <div className={styles['button-container']}>
-      <div className={classNames(buttonStyles.btn, buttonStyles['styled-btn'])} onClick={() => dropdownOpen ? closeDropdown() : openDropdown()}>Sign Up</div>
-      <ul className={classNames({
-        [styles['dropdown-items']]: true,
-        [styles['dropdown-open']]: dropdownOpen,
-      })}>
-        <ul className={styles['dropdown-item']}>Orlando</ul>
-        <ul className={styles['dropdown-item']}>New York City</ul>
-      </ul>
+      <Link to="/signup" className={classNames(buttonStyles.btn, buttonStyles['styled-btn'])}>Sign Up</Link>
     </div>
 
     <Link to="/about" className={classNames(styles['button-container'], styles['text-style'])}>About</Link>
