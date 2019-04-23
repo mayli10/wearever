@@ -19,7 +19,7 @@ export default () => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <div>
-        <Route exact path="/" component={Home}/>
+        <Route exact path="/" component={ProductListPage}/>
         <Route exact path="/signup" component={() => <SignUp/>}/>
         <Route path="/product/:id" component = {ProductPage} />
         <Route exact path="/productlistpage" component={ProductListPage}/>
@@ -27,4 +27,3 @@ export default () => (
     </ConnectedRouter>
   </Provider>
 );
-

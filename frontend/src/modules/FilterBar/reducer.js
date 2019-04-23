@@ -2,7 +2,7 @@ import * as actionTypes from './action-types';
 
 export const initialState = {
   dropdownOpen: false,
-  targetSize: null
+  targetSize: null,
 };
 
 export default (state = initialState, action) => {
@@ -11,7 +11,9 @@ export default (state = initialState, action) => {
     //   return Object.assign({}, state, { targetSize: action.targetDestination, dropdownOpen: false });
     case actionTypes.filterSize:
       return Object.assign({}, state, { targetSize: action.targetSize});
-    // case actionTypes.searchItem:
+    // case actionTypes.orderBy:
+    //   return Object.assign({}, state, { orderByType: action.orderByType });
+    // // case actionTypes.searchItem:
     //   return Object.assign({}, state, { destination: action.targetDestination, dropdownOpen: false });
     case actionTypes.openDropdown:
       return Object.assign({}, state, { dropdownOpen: true });

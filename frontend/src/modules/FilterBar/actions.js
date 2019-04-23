@@ -15,6 +15,11 @@ export const filterSize = targetSize => ({
 //   targetItem
 // });
 //
+// export const orderBy = () => ({
+//   orderByType,
+//   type: actionTypes.orderByType,
+// });
+
 export const openDropdown = () => ({
   type: actionTypes.openDropdown,
 });

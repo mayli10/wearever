@@ -16,6 +16,12 @@ export const mapStateToProps = state => {
     );
   }
 
+  // if (state.filterBar.orderByType) {
+  //   currentState.products = state.productList.products.sort(p =>
+  //     p.msrp
+  //   );
+  // }
+
   if (state.filterBar.targetSize) {
     const productsToChoose = [];
     for (let p of state.productList.products) {

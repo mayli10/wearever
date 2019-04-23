@@ -15,7 +15,7 @@ export const FilterBar = ({
   targetSize,
   openDropdown,
   closeDropdown,
-  dropdownOpen
+  dropdownOpen,
 }) => (
   <div className={styles['outer-container']}>
     <div className={styles['inner-container']}>
@@ -27,7 +27,7 @@ export const FilterBar = ({
         <p className={styles['calendar-subtitle']}>Enter your travel dates to estimate the local weather for your trip!</p>
       </div>
       <div className={styles['input-container']}>
-        <input type="text" placeholder="Size" className={styles['input']}/>
+        <input type="text" placeholder="Size" className={styles['input']} onClick={() => filterSize(null)}/>
         <img className={styles['clothes-hanger']} src={hanger} onClick={() => filterSize('Medium')}/>
       </div>
       <div className={styles['input-container']}>
