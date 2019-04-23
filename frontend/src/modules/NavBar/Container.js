@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 import NavBar from './Component';
 import * as actions from './actions';
 
-export const mapStateToProps = state => state.navbar;
+export const mapStateToProps = state => state.navBar;
 
 export const mapDispatchToProps = dispatch =>
   bindActionCreators(actions, dispatch);
