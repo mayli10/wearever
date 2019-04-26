@@ -52,9 +52,10 @@ class ProductList extends Component {
               onMouseOver={e => (e.currentTarget.src = '../../../images/icons/colored-heart.png')}
               onMouseOut={e => (e.currentTarget.src = '../../../images/icons/empty-heart.png')}/>
             </div>
-          
+
             <Link to={`/Product/${product.sku}`} style={{ textDecoration: 'none' }}>
               <div className={styles.infoSection}>
+                <div>{product.key}</div>
                 <div className={styles.designer}>{ product.designer.toUpperCase() }</div>
                 <div className={styles.title}>{ product.title }</div>
                 <span className={styles.msrp}>${ product.mrsp } retail</span>

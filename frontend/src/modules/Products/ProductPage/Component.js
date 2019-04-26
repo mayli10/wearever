@@ -13,11 +13,12 @@ class ProductPage extends Component {
         this.state = {
           isloading: true,
           productList: [],
+          key: null
         };
       }
       componentDidMount() {
         this.setState({ isloading: true });
-        this.props.firebase.product()
+        this.props.firebase.products()
                             .orderByChild("sku")
                             .equalTo(Number(this.props.product))
                             .on('value', snapshot => {
@@ -31,12 +32,12 @@ class ProductPage extends Component {
 
     render() {
         const { isloading, productList } = this.state;
-        var prod = productList[0];
+        console.log(productList)
+        var prod = productList[this.props.product];
         if (isloading) {
             console.log("loading")
             return (<div>Loading Product</div>);
         } else {
-            console.log(prod);
         return(
             <div className={styles.container}>
                 <div className={styles['img-container']}>
