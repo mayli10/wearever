@@ -2,37 +2,52 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import styles from './ProductPage.module.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { withFirebase } from '../../../components/Firebase';
 
-const prod = {
-    "sku": "12064273040195392", 
-    "title": "Poach Pocket Coat", 
-    "description": "Lulus Exclusive! Everyone will want to catch a glimpse of you wearing the Lulus Irresistible Charm Black Midi Dress! Medium-weight, stretchy knit dazzles across adjustable spaghetti straps, a high, round neckline, and a princess-seamed bodice. A high waist tops a full, flared A-line skirt for a darling, feminine look. Hidden back zipper.", 
-    "details": "Lined. Self: 96% Polyester, 4% Spandex. Lining: 100% Polyester.Hand Wash Cold.Imported.",
-    "designer": "Hutch", "msrp": 18900, "currencyId": "USD", "tags": ["sightseeing", "theme-park", "landmark", "beach", "dining", "night-out"], 
-    "prices": {"3": 1500, "5": 2000, "purchase": 17000}, "variants": [{"id": "grey-small", "options": {"color": "Grey", "size": "Small"}, 
-    "images": ["http://localhost:3001/get_image/products/grey-coat.png"], "inStock": true}, {"id": "camel-medium", "options": {"color": "Camel", "size": "Medium"}, "images": ["http://localhost:3001/get_image/products/camel-coat.png"], "inStock": true}], 
-    "optionTypes": [{"size": "Size"}, {"color": "Color"}], "defaultImages": ["http://localhost:3001/get_image/products/grey-coat.png", "http://localhost:3001/get_image/products/camel-coat.png"]
-}
 
 
 class ProductPage extends Component {
 
-    componentDidMount() {
-        console.log(this.props)
-    }
+    constructor(props) {
+        super(props);
+        this.state = {
+          isloading: true,
+          productList: [],
+        };
+      }
+      componentDidMount() {
+        this.setState({ isloading: true });
+        this.props.firebase.product()
+                            .orderByChild("sku")
+                            .equalTo(Number(this.props.product))
+                            .on('value', snapshot => {
+          var list = snapshot.val();
+          this.setState({
+            productList: list,
+            isloading: false,
+          });
+        });
+      }
 
     render() {
+        const { isloading, productList } = this.state;
+        var prod = productList[0];
+        if (isloading) {
+            console.log("loading")
+            return (<div>Loading Product</div>);
+        } else {
+            console.log(prod);
         return(
             <div className={styles.container}>
                 <div className={styles['img-container']}>
-                    <img className={styles['img']}
-                    src={prod.defaultImages[0]}
-                    onMouseOver={e => (e.currentTarget.src = prod.defaultImages[1])}
-                    onMouseOut={e => (e.currentTarget.src = prod.defaultImages[0])}/>
+                    <img className={styles.img}
+                    src={ (prod.defaultImages).split("'")[1] }
+                    onMouseOver={e => (e.currentTarget.src = (prod.defaultImages).split("'")[3])}
+                    onMouseOut={e => (e.currentTarget.src = (prod.defaultImages).split("'")[1])}/>
                     <div className ={styles.container}>
-                        <img src={prod.defaultImages[0]}
+                        <img src={(prod.defaultImages).split("'")[3]}
                         className = {styles.preview} />
-                        <img src={prod.defaultImages[1]}
+                        <img src={(prod.defaultImages).split("'")[1]}
                         className = {styles.preview} />
                     </div>
                 </div>
@@ -40,11 +55,11 @@ class ProductPage extends Component {
                     <div className={styles.infoSection}/>
                     <div className={styles.designer}>{ prod.designer.toUpperCase() }</div>
                     <div className={styles.title}>{ prod.title }</div>
-                    <span className={styles.msrp}>${ prod.msrp / 100 } retail</span>
+                    <span className={styles.msrp}>${ prod.mrsp } retail</span>
                     <div className={styles.boxcontainer}>
-                        <div className={styles.pricebox}> 3 Day rental: ${prod.prices["3"]/100}</div>
-                        <div className={styles.pricebox}> 5 Day rental: ${prod.prices["5"]/100}</div>
-                        <div className={styles.pricebox}> Purchase: ${prod.prices["purchase"]/100}</div>
+                        <div className={styles.pricebox}> 3 Day rental: ${((prod.prices).split(" ")[1]).slice(0,-1)}</div>
+                        <div className={styles.pricebox}> 5 Day rental: ${prod.prices["5"]}</div>
+                        <div className={styles.pricebox}> Purchase: ${prod.prices["purchase"]}</div>
                     </div>
                     <div className={styles.plain}>Product description</div>
                     <div className={styles.description}>{prod.description} </div>
@@ -56,11 +71,10 @@ class ProductPage extends Component {
                     </div>
                     {/* <span className={styles.prices}> | starting from ${ prod.prices["3"] / 100 }</span> */}
                 </div>
-
             </div>
-        )
+        )}
     }
 }
 
 
-export default ProductPage;
+export default withFirebase(ProductPage);
