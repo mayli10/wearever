@@ -13,11 +13,14 @@ const config = {
   };
 
 
+
   class Firebase {
     constructor() {
       app.initializeApp(config);
       this.db = app.database();
+      // this.auth = app.auth();
     }
+    
     product = () => this.db.ref(`Product/`);
     products = () => this.db.ref('Product');
   }

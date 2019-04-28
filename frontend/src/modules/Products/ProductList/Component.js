@@ -37,7 +37,6 @@ class ProductList extends Component {
   render() {
     const { isloading, productList } = this.state;
     return (
-      // this.state.productList.map((prod) =>console.log(prod))
       <div className={styles.container}>
         { isloading && 'Loading Products' }
         { productList && productList.map(product =>
@@ -59,7 +58,7 @@ class ProductList extends Component {
                 <div className={styles.designer}>{ product.designer.toUpperCase() }</div>
                 <div className={styles.title}>{ product.title }</div>
                 <span className={styles.msrp}>${ product.mrsp } retail</span>
-                <span className={styles.prices}> | starting from ${ ((product.prices).split(" ")[1]).slice(0,-1) }</span>
+                <span className={styles.prices}> | starting from ${ product.threeDays }</span>
               </div>
             </Link>
           </div>

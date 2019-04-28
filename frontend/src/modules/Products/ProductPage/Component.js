@@ -32,10 +32,8 @@ class ProductPage extends Component {
 
     render() {
         const { isloading, productList } = this.state;
-        console.log(productList)
         var prod = productList[this.props.product];
         if (isloading) {
-            console.log("loading")
             return (<div>Loading Product</div>);
         } else {
         return(
@@ -58,9 +56,9 @@ class ProductPage extends Component {
                     <div className={styles.title}>{ prod.title }</div>
                     <span className={styles.msrp}>${ prod.mrsp } retail</span>
                     <div className={styles.boxcontainer}>
-                        <div className={styles.pricebox}> 3 Day rental: ${((prod.prices).split(" ")[1]).slice(0,-1)}</div>
-                        <div className={styles.pricebox}> 5 Day rental: ${prod.prices["5"]}</div>
-                        <div className={styles.pricebox}> Purchase: ${prod.prices["purchase"]}</div>
+                        <div className={styles.pricebox}> 3 Day rental: ${prod.threeDays}</div>
+                        {/* <div className={styles.pricebox}> 5 Day rental: ${prod.prices["5"]}</div> */}
+                        <div className={styles.pricebox}> Purchase: ${prod.purchase}</div>
                     </div>
                     <div className={styles.plain}>Product description</div>
                     <div className={styles.description}>{prod.description} </div>
@@ -70,7 +68,6 @@ class ProductPage extends Component {
                         <div className={styles.pricebox}> Check Out </div>
 
                     </div>
-                    {/* <span className={styles.prices}> | starting from ${ prod.prices["3"] / 100 }</span> */}
                 </div>
             </div>
         )}
