@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import styles from './ProductPage.module.css';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { withFirebase } from '../../../components/Firebase';
+import firebase from '../../../components/Firebase/firebase';
+// import { withFirebase } from '../../../components/Firebase';
 
 
 
@@ -17,8 +18,9 @@ class ProductPage extends Component {
         };
       }
       componentDidMount() {
+        let ref = firebase.database().ref("/Product")
         this.setState({ isloading: true });
-        this.props.firebase.products()
+        ref
                             .orderByChild("sku")
                             .equalTo(Number(this.props.product))
                             .on('value', snapshot => {
@@ -75,4 +77,4 @@ class ProductPage extends Component {
 }
 
 
-export default withFirebase(ProductPage);
+export default ProductPage;

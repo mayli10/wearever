@@ -5,7 +5,7 @@ import { withFirebase } from '../../../components/Firebase'
 import styles from './ProductList.module.css';
 import emptyheart from '../../../images/icons/empty-heart.png';
 import coloredheart from '../../../images/icons/colored-heart.png';
-import firebase from '../../../components/Firebase';
+import firebase from '../../../components/Firebase/firebase';
 import Product from '../../../components/ProductPage';
 
 class ProductList extends Component {
@@ -17,9 +17,10 @@ class ProductList extends Component {
     };
   }
   componentDidMount() {
+    let ref = firebase.database().ref("/Product")
     this.setState({ isloading: true });
 
-    this.props.firebase.products().on('value', snapshot => {
+    ref.on('value', snapshot => {
       const productsObject = snapshot.val();
 
       const list = Object.keys(productsObject).map(key => ({
@@ -68,4 +69,4 @@ class ProductList extends Component {
   }
 }
 
-export default withFirebase(ProductList);
+export default ProductList;
