@@ -62,4 +62,12 @@ node_modules/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+*.env
+
+# Backend Files
+backend/.venv/*
+backend/env/*
+backend/flask/
+
+# Frontend Files
+frontend/build/*
