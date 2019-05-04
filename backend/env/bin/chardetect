@@ -1,5 +1,4 @@
-#!/Users/kimseongsik/Desktop/backend/env/bin/python
-
+#!/Users/mayli/GitHub/wearever/backend/env/bin/python3.7
 # -*- coding: utf-8 -*-
 import re
 import sys

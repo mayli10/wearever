@@ -38,6 +38,7 @@
 }
 
 .dropdown {
+  z-index: 3;
   position: relative;
   display: inline-block;
 }

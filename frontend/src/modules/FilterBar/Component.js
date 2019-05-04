@@ -16,6 +16,9 @@ export const FilterBar = ({
   openDropdown,
   closeDropdown,
   dropdownOpen,
+  openDropdown2,
+  closeDropdown2,
+  dropdownOpen2,
 }) => (
   <div className={styles['outer-container']}>
     <div className={styles['inner-container']}>
@@ -28,7 +31,17 @@ export const FilterBar = ({
       </div>
       <div className={styles['input-container']}>
         <input type="text" placeholder="Size" className={styles['input']} onClick={() => filterSize(null)}/>
-        <img className={styles['clothes-hanger']} src={hanger} onClick={() => filterSize('Medium')}/>
+          <div>
+            <img className={styles['clothes-hanger']} src={hanger} onClick={() => dropdownOpen2 ? closeDropdown2() : openDropdown2()}/>
+              <ul className={classNames({
+                [styles['dropdown-items']]: true,
+                [styles['dropdown-open']]: dropdownOpen2,
+              })}>
+                <li className={styles['dropdown-item']} onClick={() => filterSize("Small")}>Small</li>
+                <li className={styles['dropdown-item']} onClick={() => filterSize("Medium")}>Medium</li>
+                <li className={styles['dropdown-item']} onClick={() => filterSize("Large")}>Large</li>
+              </ul>
+          </div>
       </div>
       <div className={styles['input-container']}>
         <input type="text" placeholder="Search" className={styles['input']}/>

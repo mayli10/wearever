@@ -1,4 +1,3 @@
-
 from flask import Flask, redirect, url_for, send_file
 from flask_cors import CORS
 from flask_dance.contrib.google import make_google_blueprint, google
@@ -18,7 +17,7 @@ blueprint = make_google_blueprint(
 app.register_blueprint(blueprint, url_prefix="/login")
 
 @app.route("/")
-def index():  
+def index():
     return ("This is our shit")
 
 @app.route("/product_data", methods=['GET'])
@@ -61,4 +60,3 @@ def searchProduct (pid, json_obj):
 
 if __name__ == "__main__":
     app.run(port=3001)
-
