@@ -2,12 +2,10 @@ import React from 'react';
 import { Route, Link } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
-import SignUp from './components/Signup'
+import Login from './components/Login'
 import './App.css';
 import classNames from 'classnames';
 
-
-// import { ReactComponent as Logo } from './images/logo.svg';
 import Home from './components/Home';
 import EmailPopup from './components/EmailPopup';
 import ProductListPage from './components/ProductListPage';
@@ -20,7 +18,7 @@ export default () => (
     <ConnectedRouter history={history}>
       <div>
         <Route exact path="/" component={ProductListPage}/>
-        <Route exact path="/signup" component={() => <SignUp/>}/>
+        <Route exact path="/signup" component={Login}/>
         <Route path="/product/:id" component = {ProductPage} />
         <Route exact path="/productlistpage" component={ProductListPage}/>
       </div>

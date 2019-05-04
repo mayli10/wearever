@@ -9,6 +9,7 @@ import calendar from '../../images/icons/calendar.png';
 import hanger from '../../images/icons/clothes-hanger.png';
 import magnifyingGlass from '../../images/icons/magnifying-glass.png';
 import filterButton from '../../images/icons/filter-button.png';
+import emptyheart from '../../images/icons/empty-heart.png';
 
 export const FilterBar = ({
   filterSize,
@@ -73,9 +74,10 @@ export const FilterBar = ({
 
       <div className={styles['heart-container']}>
         <img className={styles['heart']}
-        src="http://localhost:3001/get_image/icons/empty-heart.png"
-        onMouseOver={e => (e.currentTarget.src = "http://localhost:3001/get_image/icons/colored-heart.png")}
-        onMouseOut={e => (e.currentTarget.src = "http://localhost:3001/get_image/icons/empty-heart.png")}/>
+        src={emptyheart}
+        onMouseOver={e => (e.currentTarget.src = "../../images/icons/colored-heart.png")}
+        onMouseOut={e => (e.currentTarget.src = "../../images/icons/empty-heart.png")}
+        />
         <div className={styles['heart-subtitle']}>Liked</div>
       </div>
 

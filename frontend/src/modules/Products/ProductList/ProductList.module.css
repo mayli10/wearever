@@ -1,9 +1,21 @@
 .container {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(160px, 1fr)); */
   margin: 20px 0 0 50px;
+  /* background-color: orange; */
 }
 
+/* .description {
+  text-decoration: none;
+  padding: 0 10px;
+  background-color: aqua;
+} */
+
+.child-container{
+  flex: 1 0 21%;
+}
 .img-container {
   position: relative;
 }
@@ -11,7 +23,7 @@
 .img {
   width: 200px;
   height: 320px;
-  padding: 25px;
+
 }
 
 .designer {
@@ -42,6 +54,7 @@
 .info-section {
   padding: 0px 25px 25px;
   text-decoration: none;
+  background-color: aqua;
 }
 
 .prices {
