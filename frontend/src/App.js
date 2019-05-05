@@ -12,6 +12,7 @@ import ProductListPage from './components/ProductListPage';
 import ProductPage from './components/ProductPage';
 import DefaultNavBar from './components/DefaultNavBar';
 import store, { history } from './store';
+import Checkout from './components/Checkout';
 
 export default () => (
   <Provider store={store}>
@@ -21,6 +22,7 @@ export default () => (
         <Route exact path="/signup" component={Login}/>
         <Route path="/product/:id" component = {ProductPage} />
         <Route exact path="/productlistpage" component={ProductListPage}/>
+        <Route exact path="/checkout" component={Checkout}/>
       </div>
     </ConnectedRouter>
   </Provider>
