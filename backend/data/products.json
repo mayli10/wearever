@@ -8,7 +8,7 @@
         "designer": "Hutch",
         "msrp": 18900,
         "currencyId": "USD",
-        "tags": ["sightseeing", "theme-park", "landmark", "beach", "dining", "night-out"],
+        "tags": ["sightseeing", "theme-park", "beach", "dining", "work"],
         "prices": {
           "3": 1500,
           "5": 2000,
@@ -45,7 +45,8 @@
         "defaultImages": [
           "http://localhost:3001/get_image/products/grey-coat.png",
           "http://localhost:3001/get_image/products/camel-coat.png"
-        ]
+      ],
+      "popularity": 2
       },
       {
         "sku": "19421207353092604",
@@ -55,7 +56,7 @@
         "designer": "ELLIATT",
         "msrp": 6900,
         "currencyId": "USD",
-        "tags": ["sightseeing", "landmark", "dining", "night-out"],
+        "tags": ["sightseeing", "landmark", "night-out", "bridal-shower"],
         "prices": {
           "3": 1000,
           "5": 1500,
@@ -98,8 +99,9 @@
         "defaultImages": [
           "http://localhost:3001/get_image/products/black-dress-front.png",
           "http://localhost:3001/get_image/products/black-dress-back.png"
-        ]
-      },
+        ],
+        "popularity": 3
+        },
       {
         "sku": "53013994212072653",
         "title": "White Josie Dress",
@@ -108,7 +110,7 @@
         "designer": "Cinq à Sept",
         "msrp": 38500,
         "currencyId": "USD",
-        "tags": ["sightseeing", "landmark", "dining", "night-out", "bridal-shower", "date"],
+        "tags": ["sightseeing", "dining", "night-out"],
         "prices": {
           "3": 4000,
           "5": 6000,
@@ -151,8 +153,9 @@
         "defaultImages": [
           "http://localhost:3001/get_image/products/white-dress-front.png",
           "http://localhost:3001/get_image/products/white-dress-back.png"
-        ]
-      },
+        ],
+        "popularity": 4
+        },
       {
         "sku": "65352120723013994",
         "title": "Delicate Jumpsuit",
@@ -204,7 +207,8 @@
         "defaultImages": [
           "http://localhost:3001/get_image/products/black-jumpsuit-front.png",
           "http://localhost:3001/get_image/products/black-jumpsuit-back.png"
-        ]
+        ],
+        "popularity": 1
       }
     ]
   }

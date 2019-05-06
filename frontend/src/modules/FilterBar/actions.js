@@ -27,3 +27,11 @@ export const openDropdown = () => ({
 export const closeDropdown = () => ({
   type: actionTypes.closeDropdown,
 })
+
+export const openDropdown2 = () => ({
+  type: actionTypes.openDropdown2,
+});
+
+export const closeDropdown2 = () => ({
+  type: actionTypes.closeDropdown2,
+})
