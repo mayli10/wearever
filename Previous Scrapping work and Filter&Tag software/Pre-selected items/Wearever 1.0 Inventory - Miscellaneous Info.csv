@@ -1,0 +1,10 @@
+"The indicated flat rate price allows you to rent for up to 3 days per item.
+You don't need to worry about shipping it back. We will pick up the item for free. You will receive more information about returning items after completing the transaction.
+If you return a Product that is damaged beyond normal wear and tear, then you agree that we shall charge you, and you shall pay, for the price for repairing or replacing the item, but it will never be 100% of the retail price.",
+,
+Pricing:,
+<100,15
+100-200:,25
+200-400,30
+400-600,45
+>600,50
