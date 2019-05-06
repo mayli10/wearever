@@ -37,8 +37,12 @@ export const SideBar = ({
       <Link to="/signup" className={classNames(buttonStyles.btn, buttonStyles['styled-btn'])}>Sign Up</Link>
     </div>
 
-    <Link to="/about" className={classNames(styles['button-container'], styles['text-style'])}>About</Link>
+    {/*<Link to="/about" className={classNames(styles['button-container'], styles['text-style'])}>About</Link>
     <Link to="/contact-us" className={classNames(styles['button-container'], styles['text-style'])}>Contact Us</Link>
+    */}
+    <a href="https://www.gowearever.com/" className={classNames(styles['button-container'], styles['text-style'])}>About</a>
+    <a href="https://www.gowearever.com/contact" className={classNames(styles['button-container'], styles['text-style'])}>Contact Us</a>
+
   </div>
 );
 

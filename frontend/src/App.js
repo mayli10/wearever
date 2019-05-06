@@ -8,6 +8,7 @@ import classNames from 'classnames';
 
 import Home from './components/Home';
 import EmailPopup from './components/EmailPopup';
+import LandingPage from './components/LandingPage';
 import ProductListPage from './components/ProductListPage';
 import ProductPage from './components/ProductPage';
 import DefaultNavBar from './components/DefaultNavBar';

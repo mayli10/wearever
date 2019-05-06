@@ -11,7 +11,8 @@ export const DefaultNavBar = ({
   <div className='outer-container'>
     <div className={classNames('inner-container', layoutStyles.container)}>
       <div className='logo-wrapper'>
-        <Link to="/productlistpage"><img src={logo} alt="Wearever" className='logo'/></Link>
+        {/*<Link to="/productlistpage"><img src={logo} alt="Wearever" className='logo'/></Link>*/}
+        <a href='https://www.gowearever.com/'><img src={logo} alt="Wearever" className='logo'/></a>
       </div>
       <div className='empty'></div>
 

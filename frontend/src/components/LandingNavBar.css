@@ -1,0 +1,61 @@
+.inner-container{
+    height: auto;
+    width: auto;
+    position: relative;
+    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+}
+.directory-links{
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: auto;
+    width: auto;
+    min-height: auto;
+    grid-template-rows: min-content min-content 1fr;
+    grid-template-columns: 100%;
+    flex-grow: 2;
+    flex-basis: 100%;
+    /*margin: auto 0px auto calc((100% - 990px) * 0.5);*/
+    margin: 0px 0px 0px 0px;
+    grid-area: 1 / 1 / 2 / 2;
+    justify-self: start;
+    align-self: start;
+
+}
+.navigation-list{
+    text-align: -webkit-match-parent;
+    width: calc(100% - 0px);
+    height: calc(100% - 0px);
+    white-space: nowrap;
+    display: inline-block;
+    overflow: visible;
+    position: relative;
+    
+}
+.navigation-button{
+    width: calc(100% - 750px);
+    height: 25px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: visible;
+    display: inline-block;
+    cursor: pointer;
+    font: normal normal normal 14px/1.4em futura-lt-w01-book,sans-serif;
+    color: black;
+    line-height: 25px;
+}
+.navigation-link{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    padding: 0 5px;
+    text-align: center;
+    font:  futura-lt-w01-book;
+}
+.signup-btn-wrapper {
+    flex: 0 0 120px;
+    text-align: right;
+  }
