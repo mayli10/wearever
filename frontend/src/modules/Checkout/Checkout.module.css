@@ -1,16 +1,34 @@
 /* .master-container {
   margin: 1em;
 } */
+.header {
+  font-size: 2em;
+  margin: 10px;
+
+}
+.subtitle{
+  font-size: 1.1em;
+  margin: 10px auto;
+}
+
+.content{
+  margin: 10px auto;
+}
+
+.calendar-container {
+  margin: 10px auto;
+  padding: 30px 30px 30px 50px;
+}
+
 .outer-container {
-  border-bottom: 1px solid #B8B8B8;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  margin: 1em;
-  width: 100%;
+  width: 500px;
+	padding: 30px;
+	background: #FFFFFF;
+	margin: 10px auto;
 }
 
 .inner-container {
+  margin: 1em 1em 0 0;
   position: relative;
   display: flex;
   align-items: center;
