@@ -9,6 +9,7 @@ import counter from './modules/Counter/reducer';
 import navBar from './modules/NavBar/reducer';
 import sideBar from './modules/SideBar/reducer';
 import filterBar from './modules/FilterBar/reducer';
+import myWeareverBox from './modules/MyWeareverBox/reducer';
 import productList from './modules/Products/ProductList/reducer';
 import productPage from './modules/Products/ProductPage/reducer';
 
@@ -20,6 +21,7 @@ const rootReducer = combineReducers({
   sideBar,
   productList,
   filterBar,
+  myWeareverBox,
   form: formReducer,
   productPage,
   router: connectRouter(history),

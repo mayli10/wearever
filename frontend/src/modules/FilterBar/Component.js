@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 import styles from './FilterBar.module.css';
 import buttonStyles from '../../styles/button.module.css';
-import boxButton from '../../images/icons/boxButton.png';
 import layoutStyles from '../../styles/layout.module.css';
+import boxButton from '../../images/icons/boxButton.png';
 import calendar from '../../images/icons/calendar.png';
 import hanger from '../../images/icons/clothes-hanger.png';
 import magnifyingGlass from '../../images/icons/magnifying-glass.png';
@@ -82,7 +82,7 @@ export const FilterBar = ({
       </div>
 
       <div className={styles['box-container']}>
-        <Link to="/box"><img src={boxButton} alt="Wearever Box" className={styles.box}/></Link>
+        <Link to="/my-wearever-box"><img src={boxButton} alt="Wearever Box" className={styles.box}/></Link>
         <div className={styles['box-subtitle']}>My Box</div>
       </div>
 

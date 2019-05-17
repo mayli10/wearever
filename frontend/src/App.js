@@ -11,6 +11,7 @@ import EmailPopup from './components/EmailPopup';
 import ProductListPage from './components/ProductListPage';
 import ProductPage from './components/ProductPage';
 import DefaultNavBar from './components/DefaultNavBar';
+import MyWeareverBox from './modules/MyWeareverBox/Container';
 import store, { history } from './store';
 
 export default () => (
@@ -21,6 +22,7 @@ export default () => (
         <Route exact path="/signup" component={Login}/>
         <Route path="/product/:id" component = {ProductPage} />
         <Route exact path="/productlistpage" component={ProductListPage}/>
+        <Route exact path="/my-wearever-box" component={MyWeareverBox}/>
       </div>
     </ConnectedRouter>
   </Provider>
