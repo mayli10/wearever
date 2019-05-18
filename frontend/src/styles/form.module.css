@@ -50,7 +50,7 @@
 	resize: none;
 	overflow: hidden;
 }
-.form-style input[type="button"], 
+/* .form-style input[type="button"], 
 .form-style input[type="submit"]{
 	-moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
 	-webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
@@ -63,7 +63,7 @@
 	padding: 8px 18px;
 	text-decoration: none;
 	text-transform: uppercase;
-}
+} */
 .form-style input[type="button"]:hover, 
 .form-style input[type="submit"]:hover {
 	background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);

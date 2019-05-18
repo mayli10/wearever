@@ -1,17 +1,14 @@
 import 'date-fns';
 import React, { Component } from 'react';
 import { DateRangePicker } from 'react-dates';
+import { Link } from 'react-router-dom';
 import 'react-dates/initialize'; // necessary for latest version 
 import 'react-dates/lib/css/_datepicker.css';
-// import moment from 'moment';
 import classNames from 'classnames';
 import styles from './Checkout.module.css';
-import MenuItem from '@material-ui/core/MenuItem';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
-import brown from '@material-ui/core/colors/brown';
-import btn from '../../../../frontend/src/styles/button.module.css';
+import buttonStyles from '../../../../frontend/src/styles/button.module.css';
 import form from '../../../../frontend/src/styles/form.module.css';
+
 
 
 class Checkout extends Component {
@@ -82,62 +79,13 @@ class Checkout extends Component {
                         <label for="telNo">Phone number:</label>
                         <input type="text" name="phone" placeholder="ex) XXX-XXX-XXXX"/>
                     </div>
-
+                    {/* <input type="submit" className={classNames(buttonStyles.btn, buttonStyles['styled-btn'], styles['submit-button'])}></input> */}
                     </form>
+                    <Link to="./waitlist" className={classNames(buttonStyles.btn, buttonStyles['styled-btn'])}>Submit</Link>
                 </div>
             </div>
         </div>
-        // <div className={styles["outer-container"]}>
-        //     <h1>Checkout</h1>
-        //     <div className={styles["outer-container"]}>
-        //     <div className={styles["section-title"]}>1. Choose your Wearever box Pick Up & Return Date</div>
-        //         <div className={styles["section-title"]}>
-        //             <DateRangePicker 
-        //             startDateId="startDate"
-        //             endDateId="endDate"
-        //             startDate={this.state.startDate}
-        //             endDate={this.state.endDate}
-        //             onDatesChange={({ startDate, endDate }) => { this.setState({ startDate, endDate })}}
-        //             focusedInput={this.state.focusedInput}
-        //             onFocusChange={(focusedInput) => { this.setState({ focusedInput })}}
-        //         />
-        //         </div>
-        //     </div>
-        //     <div className={styles["outer-container"]}>
-        //     2. Choose a pickup / drop off time. 
-        //     <div className={styles["outer-container"]}>
-        //         Pickup Time: 
-        //         <TextField
-        //   name='title'
-        //   margin='normal'
-        //   variant="outlined"
-        // />
-        // </div>
-        // <div className={styles["outer-container"]}>
-        //         Drop off Time: 
-        //         <TextField
-        //   name='title'
-        //   margin='normal'
-        //   variant="outlined"
-        // />
-        // </div>
-        //     </div>
-        //     <form className={form["form-style"]}>
-        //         <label>3. Enter the address you would want to receive your Wearever box! 
-        //             <div className={styles["inner-container"]}>
-        //                 <button className={classNames(btn.btn, btn['styled-btn'])}> Hotel </button>
-        //                 <button className={btn["styled-btn"]}> Airport </button>
-        //             </div>
-                
-        //         <input className={form["form-style"]}/>
-        //         </label>
-        //         <div className={styles["outer-container"]}>
-        //         <button className={btn["styled-btn"]}> Submit </button>
-        //         </div>
-                
-        //     </form>
-            
-        // </div>
+
         );
     }
 }
