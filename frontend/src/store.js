@@ -11,7 +11,6 @@ import sideBar from './modules/SideBar/reducer';
 import filterBar from './modules/FilterBar/reducer';
 import myWeareverBox from './modules/MyWeareverBox/reducer';
 import productList from './modules/Products/ProductList/reducer';
-import productPage from './modules/Products/ProductPage/reducer';
 
 export const history = createHistory();
 
@@ -23,7 +22,6 @@ const rootReducer = combineReducers({
   filterBar,
   myWeareverBox,
   form: formReducer,
-  productPage,
   router: connectRouter(history),
 });
 

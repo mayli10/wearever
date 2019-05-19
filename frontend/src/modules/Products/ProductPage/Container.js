@@ -1,9 +1,10 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import ProductList from './Component';
+import ProductPage from './Component';
 import * as actions from './actions';
 
+//need to do this
 export const mapStateToProps = state => {
   let currentState = {
     isLoading: state.productList.loadingTodo,
@@ -35,4 +36,4 @@ export const mapDispatchToProps = dispatch =>
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(ProductList);
+)(ProductPage);

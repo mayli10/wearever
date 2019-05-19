@@ -22,10 +22,14 @@ export const MyWeareverBox = ({
       <div className={styles['side-bar-container']}>
         <SideBar/>
       </div>
-      <div className={styles['items-container']}>
-        Looks a little empty here!<br/>
-        First time trying Wearever? Use code <strong>revolutionary</strong> to get 50% off your first Wearever Box!<br/>
-        <Link className={buttonStyles['styled-btn']} to="/">Start Shopping</Link>
+      <div className={styles['outside-container']}>
+        <ul className={styles['items-container']}>
+          <li>Looks a little empty here!</li>
+          <li>Use code <strong>revolutionary</strong> to get 50% off your first Wearever Box!</li>
+          <li>
+            <Link className={buttonStyles['styled-btn']} to="/">Start Shopping</Link>
+          </li>
+        </ul>
       </div>
     </div>
 
