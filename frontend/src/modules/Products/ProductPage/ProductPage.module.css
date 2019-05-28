@@ -50,6 +50,7 @@
 }
 
 .pricebox {
+  cursor: pointer;
   margin: 0 0.3em;
   padding: 0.3em 0.5em;
   /* width: 10em;
@@ -80,6 +81,7 @@
 }
 
 .preview {
+  cursor: pointer;
   width: 100px;
   height: 100px;
   margin: 1px;

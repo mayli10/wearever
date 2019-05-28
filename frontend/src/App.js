@@ -3,7 +3,6 @@ import { Route, Link } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import Login from './components/Login'
-import './App.css';
 import classNames from 'classnames';
 
 import Home from './components/Home';

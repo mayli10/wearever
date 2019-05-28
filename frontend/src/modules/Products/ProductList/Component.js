@@ -47,10 +47,7 @@ class ProductList extends Component {
               src={ (product.defaultImages).split("'")[1] }
               onMouseOver={e => (e.currentTarget.src = (product.defaultImages).split("'")[3])}
               onMouseOut={e => (e.currentTarget.src = (product.defaultImages).split("'")[1])}/>
-              <img className={styles['heart']}
-              src={emptyheart}
-              onMouseOver={e => (e.currentTarget.src = '../../../images/icons/colored-heart.png')}
-              onMouseOut={e => (e.currentTarget.src = '../../../images/icons/empty-heart.png')}/>
+              <img className={styles['heart']} src={emptyheart} onClick={()=>console.log(product.sku)}/>
             </div>
 
             <Link to={`/Product/${product.sku}`} style={{ textDecoration: 'none' }}>

@@ -73,11 +73,7 @@ export const FilterBar = ({
       </div>
 
       <div className={styles['heart-container']}>
-        <img className={styles['heart']}
-        src={emptyheart}
-        onMouseOver={e => (e.currentTarget.src = "../../images/icons/colored-heart.png")}
-        onMouseOut={e => (e.currentTarget.src = "../../images/icons/empty-heart.png")}
-        />
+        <img className={styles['heart']} src={emptyheart}/>
         <div className={styles['heart-subtitle']}>Liked</div>
       </div>
 
