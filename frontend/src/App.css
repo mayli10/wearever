@@ -1,1 +1,4 @@
-
+/* Needed to render calendar in checkout correctly! */
+.DateRangePicker *, .SingleDatePicker *, .DayPickerRangeController * {
+    box-sizing: border-box;
+  }

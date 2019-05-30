@@ -1,0 +1,89 @@
+.form-style{
+	/* font-family: 'Open Sans Condensed', arial, sans; */
+	width: 500px;
+	padding: 30px;
+	background: #FFFFFF;
+	margin: 10px auto;
+	/* box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22); */
+
+}
+.form-style h2{
+	background: #4D4D4D;
+	text-transform: uppercase;
+	color: #797979;
+	font-size: 18px;
+	font-weight: 100;
+	padding: 20px;
+	margin: -30px -30px 30px -30px;
+}
+.form-style input[type="text"],
+.form-style input[type="date"],
+.form-style input[type="datetime"],
+.form-style input[type="email"],
+.form-style input[type="number"],
+.form-style input[type="search"],
+.form-style input[type="time"],
+.form-style input[type="url"],
+.form-style input[type="password"],
+.form-style textarea,
+.form-style select 
+{
+    box-sizing: border-box;
+    font-size: 1em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 100%;
+	padding: 7px;
+	/* border: none; */
+	border: 1px solid #ddd;
+	background: transparent;
+    margin-bottom: 15px;
+    margin-top: 10px;
+    height: 45px;
+    transition: ease-in-out, border .35s ease-in-out;
+}
+.form-style textarea{
+	resize: none;
+	overflow: hidden;
+}
+/* .form-style input[type="button"], 
+.form-style input[type="submit"]{
+	-moz-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	-webkit-box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	box-shadow: inset 0px 1px 0px 0px #45D6D6;
+	background-color: #2CBBBB;
+	border: 1px solid #27A0A0;
+	display: inline-block;
+	cursor: pointer;
+	color: #FFFFFF;
+	padding: 8px 18px;
+	text-decoration: none;
+	text-transform: uppercase;
+} */
+.form-style input[type="button"]:hover, 
+.form-style input[type="submit"]:hover {
+	background:linear-gradient(to bottom, #34CACA 5%, #30C9C9 100%);
+	background-color:#34CACA;
+}
+
+.form-style label {
+    margin-bottom: 20px;
+}
+
+.form-style input[type="text"]:focus,
+.form-style input[type="date"]:focus,
+.form-style input[type="datetime"]:focus,
+.form-style input[type="email"]:focus,
+.form-style input[type="number"]:focus,
+.form-style input[type="search"]:focus,
+.form-style input[type="time"]:focus,
+.form-style input[type="url"]:focus,
+.form-style input[type="password"]:focus,
+.form-style textarea:focus,
+.form-style select:focus {
+    border: 2px solid #7A4938;
+}
