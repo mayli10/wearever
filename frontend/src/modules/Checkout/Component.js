@@ -68,20 +68,20 @@ class Checkout extends Component {
                     <div className={styles.subtitle}>3. Select Pickup/ Drop off location </div>
                     <form className={form["form-style"]}>
                     <div>
-                        <label for="username">Name:</label>
+                        <label for="username">Address:</label>
                         <input type="text" name="username"/>
                     </div>
-                    <div>
+                    {/* <div>
                         <label for="email">Email:</label>
                         <input type="email" name="Email"/>
                     </div>
                     <div>
                         <label for="telNo">Phone number:</label>
                         <input type="text" name="phone" placeholder="ex) XXX-XXX-XXXX"/>
-                    </div>
+                    </div> */}
                     {/* <input type="submit" className={classNames(buttonStyles.btn, buttonStyles['styled-btn'], styles['submit-button'])}></input> */}
                     </form>
-                    <Link to="./waitlist" className={classNames(buttonStyles.btn, buttonStyles['styled-btn'])}>Submit</Link>
+                    <Link to="https://www.gowearever.com/sign-up" className={classNames(buttonStyles.btn, buttonStyles['styled-btn'])}>Submit</Link>
                 </div>
             </div>
         </div>
