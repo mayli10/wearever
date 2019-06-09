@@ -81,7 +81,7 @@ class Checkout extends Component {
                     </div> */}
                     {/* <input type="submit" className={classNames(buttonStyles.btn, buttonStyles['styled-btn'], styles['submit-button'])}></input> */}
                     </form>
-                    <Link to="https://www.gowearever.com/sign-up" className={classNames(buttonStyles.btn, buttonStyles['styled-btn'])}>Submit</Link>
+                    <a href="https://www.gowearever.com/sign-up" className={classNames(buttonStyles.btn, buttonStyles['styled-btn'])}>Submit</a>
                 </div>
             </div>
         </div>

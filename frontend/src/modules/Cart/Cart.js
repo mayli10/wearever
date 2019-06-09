@@ -1,52 +1,61 @@
 import React, { Component } from 'react';
-import connect from 'react-redux';
-import uuid from 'uuid';
-import { Scrollbars } from 'react-custom-scrollbars';
 import CartItem from './CartItem';
-import { showCart, addItem } from './actions.js';
+import styles from './cart.module.css';
+import firebase from '../../components/Firebase/firebase';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import buttonStyles from '../../styles/button.module.css';
+import classNames from 'classnames';
+
 
 class Cart extends Component {
-    showCart = () => {
-        const { showCart } = this.props;
-        showCart();
-      };
+    
+    constructor(props) {
+        super(props);
+        this.state = {
+          isloading: true,
+          productList: [],
+          total:0,
+        };
+    }
+
+    componentDidMount() {
+        let ref = firebase.database().ref("/Cart")
+        this.setState({ isloading: true });
+    
+        ref.on('value', snapshot => {
+          const productsObject = snapshot.val();
+            console.log(productsObject);
+          const list = Object.keys(productsObject).map(key => ({
+            ...productsObject[key],
+            uid: key,
+          }));
+    
+          this.setState({
+            productList: list,
+            isloading: false,
+          });
+        });
+      }
 
     render() {
-        const { isOpen, cartItems } = this.props.cart;
+        const { isloading, productList } = this.state;
+        console.log(productList)
         return (
-            <div className= {`cart ${!isOpen ? 'transparent' : ''}`}>
-                <div className={`cart-inside ${!isOpen ? 'active' : ''}`}>
-                    <h2>Shopping Cart</h2>
-                    <button type="button" className="close" onClick={this.showCart}>
-                        Close
-                    </button>
-                    <Scrollbars style={{ height: '65%' }}>
-                    <div className={'items'}>
-                        {cartItems.length === 0 ? (
-                            <h3> Nothing has been added yet. Add to your Wearever Box! </h3>
-                        ) : (
-                            <ul>
-                            { cartItems.map(item => (
-                                <li key={item.pid}>
-                                    <CartItem item={item} />
-                                </li>
-                            )) }
-                            </ul>
-                        )}
-                    </div>
-                    </Scrollbars>
-                </div>
+          <div className={styles['outer-container']}>
+             <div className={styles.header}>My Wearever Box</div>
+            { isloading && <div class={styles.cart}>Loading</div> }
+            { productList && productList.map(product =>
+              <div class={styles.cart}>
+                  <CartItem item = {product.meta}></CartItem>
+              </div>
+            )}
+            <div className={styles.bottom}>
+                <Link to='/checkout'className={classNames(buttonStyles.btn, buttonStyles['styled-btn'])}> Check Out All</Link>
             </div>
-        )
-    }
+          </div>
+        );
+      }
 }
 
-const mapStateToProps = state => ({
-    cart: state.cart
-  });
-  
-export default connect(
-    mapStateToProps,
-    { showCart, addItem }
-  )(Cart);
+export default Cart;
   
