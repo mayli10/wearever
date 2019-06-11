@@ -13,8 +13,7 @@ export const SideBar = ({
 }) => (
   <div className={styles['outer-container']}>
     <div className={styles['button-container']}>
-      <div className={classNames(buttonStyles.btn, buttonStyles['styled-btn'], styles['activities-button'])}
-      onClick={() => dropdownOpen ? closeDropdown() : openDropdown()}>Activities</div>
+      <div className={classNames(buttonStyles.btn, buttonStyles['styled-btn'], styles['activities-button'])}onClick={() => dropdownOpen ? closeDropdown() : openDropdown()}>Activities</div>
       <ul className={classNames({
         [styles['dropdown-items']]: true,
         [styles['dropdown-open']]: dropdownOpen,

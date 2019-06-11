@@ -50,7 +50,8 @@ class ProductList extends Component {
               <img className={styles['heart']}
               src={emptyheart}
               onMouseOver={e => (e.currentTarget.src = coloredheart)}
-              onMouseOut={e => (e.currentTarget.src = emptyheart)}/>
+              onMouseLeave={e => (e.currentTarget.src = emptyheart)}
+              />
             </div>
 
             <Link to={`/Product/${product.sku}`} style={{ textDecoration: 'none' }}>

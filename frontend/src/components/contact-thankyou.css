@@ -1,0 +1,10 @@
+.success_container{
+    display: flex;
+    justify-content: center;
+    margin: 25px 0 0 0;
+}
+.Success{
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px; 
+}
