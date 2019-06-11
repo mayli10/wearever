@@ -24,7 +24,6 @@ class Cart extends Component {
     
         ref.on('value', snapshot => {
           const productsObject = snapshot.val();
-            console.log(productsObject);
           const list = Object.keys(productsObject).map(key => ({
             ...productsObject[key],
             uid: key,
@@ -39,16 +38,19 @@ class Cart extends Component {
 
     render() {
         const { isloading, productList } = this.state;
-        console.log(productList)
+        var cost = (productList.map(product => product.meta.threeDays)).reduce((a, b) => a + b, 0)
         return (
           <div className={styles['outer-container']}>
              <div className={styles.header}>My Wearever Box</div>
-            { isloading && <div class={styles.cart}>Loading</div> }
+            { isloading && <div className={styles.cart}>Loading</div> }
             { productList && productList.map(product =>
               <div class={styles.cart}>
                   <CartItem item = {product.meta}></CartItem>
               </div>
             )}
+            <div className={styles.title}>
+              Total: <span className={styles.designer}> ${cost} </span> (Three day rental)
+            </div>
             <div className={styles.bottom}>
                 <Link to='/checkout'className={classNames(buttonStyles.btn, buttonStyles['styled-btn'])}> Check Out All</Link>
             </div>

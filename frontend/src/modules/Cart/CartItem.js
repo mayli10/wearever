@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import firebase from '../../components/Firebase/firebase';
 import styles from './cart.module.css';
 import classNames from 'classnames';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
@@ -13,19 +14,19 @@ class CartItem extends Component {
     }
 
     deleteItem = id => {
-        console.log(id)
+        let ref = firebase.database().ref("/Cart/"+id);
+        ref.remove();
     }
     
     render() {
         const object = this.props;
-        console.log(object);
         const prod = object.item;
         return (
             <div className={styles.container}>
                 <button
                 type="button"
                 className={styles.close}
-                onClick={this.deleteItem(prod.sku)}
+                onClick={this.deleteItem.bind(null,prod.sku)}
                 >
                     &#xd7;
                 </button>
