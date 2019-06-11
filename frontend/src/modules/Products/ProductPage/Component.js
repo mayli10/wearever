@@ -38,10 +38,11 @@ class ProductPage extends Component {
 
       addClick = product => {
           console.log(product)
-        let ref = firebase.database().ref("/Cart/"+product.sku)
-        ref.push({
-            pid: product.sku,
-            meta: product,
+        let ref = firebase.database().ref("/Cart")
+        const pid = product.sku
+        const meta = product
+        ref.child(pid).set({
+            meta
         })
       };
 

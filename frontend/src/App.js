@@ -5,7 +5,7 @@ import { ConnectedRouter } from 'connected-react-router';
 import Login from './components/Login'
 import './App.css';
 import classNames from 'classnames';
-
+import Cart from './components/Cart';
 import Home from './components/Home';
 import EmailPopup from './components/EmailPopup';
 import LandingPage from './components/LandingPage';
@@ -24,6 +24,7 @@ export default () => (
         <Route path="/product/:id" component = {ProductPage} />
         <Route exact path="/productlistpage" component={ProductListPage}/>
         <Route exact path="/checkout" component={Checkout}/>
+        <Route exact path="/box" component={Cart}/>
       </div>
     </ConnectedRouter>
   </Provider>
