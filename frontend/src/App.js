@@ -12,16 +12,20 @@ import LandingPage from './components/LandingPage';
 import ProductListPage from './components/ProductListPage';
 import ProductPage from './components/ProductPage';
 import DefaultNavBar from './components/DefaultNavBar';
+import ContactUs from './components/contact-us';
+import ContactUsThankyou from './components/contact-thankyou';
 import store, { history } from './store';
 
 export default () => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <div>
-        <Route exact path="/" component={ProductListPage}/>
+        <Route exact path="/" component={LandingPage}/>
         <Route exact path="/signup" component={Login}/>
         <Route path="/product/:id" component = {ProductPage} />
         <Route exact path="/productlistpage" component={ProductListPage}/>
+        <Route exact path="/contact-us" component={ContactUs}/>
+        <Route exact path="/contact-thankyou" component={ContactUsThankyou}/>
       </div>
     </ConnectedRouter>
   </Provider>

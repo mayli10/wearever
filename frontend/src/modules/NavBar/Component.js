@@ -17,8 +17,8 @@ export const NavBar = ({
   <div className={styles['outer-container']}>
     <div className={classNames(styles['inner-container'], layoutStyles.container)}>
       <div className={styles['logo-wrapper']}>
-        {/*<Link to="/productlistpage"><img src={logo} alt="Wearever" className='logo'/></Link>*/}
-        <a href='https://www.gowearever.com/'><img src={logo} alt="Wearever" className='logo'/></a>
+        <Link to="/"><img src={logo} alt="Wearever" className='logo'/></Link>
+        {/*<a href='https://www.gowearever.com/'><img src={logo} alt="Wearever" className='logo'/></a>*/}
       </div>
       <div className={styles.empty}></div>
       <div className={styles['destination-name']}>{destination}</div>

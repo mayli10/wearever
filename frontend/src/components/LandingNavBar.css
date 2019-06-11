@@ -1,61 +1,65 @@
-.inner-container{
-    height: auto;
-    width: auto;
+.outer-container{
     position: relative;
-    font-family: Futura, "Trebuchet MS", Arial, sans-serif;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.inner-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 .directory-links{
-    position: relative;
-    display: flex;
     align-items: center;
-    height: auto;
-    width: auto;
-    min-height: auto;
-    grid-template-rows: min-content min-content 1fr;
-    grid-template-columns: 100%;
-    flex-grow: 2;
-    flex-basis: 100%;
-    /*margin: auto 0px auto calc((100% - 990px) * 0.5);*/
-    margin: 0px 0px 0px 0px;
-    grid-area: 1 / 1 / 2 / 2;
-    justify-self: start;
-    align-self: start;
-
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 90%;
+    margin: 0 14% 0 14%;
 }
 .navigation-list{
-    text-align: -webkit-match-parent;
-    width: calc(100% - 0px);
-    height: calc(100% - 0px);
-    white-space: nowrap;
-    display: inline-block;
-    overflow: visible;
-    position: relative;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+    padding:0 0 0 0;
+
     
 }
 .navigation-button{
-    width: calc(100% - 750px);
-    height: 25px;
-    position: relative;
-    box-sizing: border-box;
-    overflow: visible;
-    display: inline-block;
-    cursor: pointer;
-    font: normal normal normal 14px/1.4em futura-lt-w01-book,sans-serif;
-    color: black;
-    line-height: 25px;
+    display: inline;
+    flex: 0 0 auto;
+    margin: 0 3% 0 3%;
+    line-height: 25px
+    
 }
 .navigation-link{
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
-    text-decoration: none;
-    color: black;
-    padding: 0 5px;
-    text-align: center;
+    display: inline;
     font:  futura-lt-w01-book;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    font-size: 89%;
+
 }
 .signup-btn-wrapper {
+    margin: 0 20px 0 20px;
+}
+.logo-wrapper{
     flex: 0 0 120px;
-    text-align: right;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.logo {
+    width: 50px;
+    height: auto;
+    display: flex;
+    margin: 15px 0;
   }

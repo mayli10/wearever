@@ -12,7 +12,7 @@ export const DefaultNavBar = ({
   <div className='outer-container'>
     <div className={classNames('inner-container', layoutStyles.container)}>
       <div className='logo-wrapper'>
-        <Link to="/productlistpage"><img src={logo} alt="Wearever" className='logo'/></Link>
+        <Link to="/"><img src={logo} alt="Wearever" className='logo'/></Link>
       </div>
       <div className='directory-links'>
         <ul  className='navigation-list'>
