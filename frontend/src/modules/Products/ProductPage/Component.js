@@ -9,14 +9,18 @@ import firebase from '../../../components/Firebase/firebase';
 
 class ProductPage extends Component {
 
+
     constructor(props) {
         super(props);
+        this.addClick = this.addClick.bind(this);
         this.state = {
           isloading: true,
           productList: [],
           key: null
         };
       }
+
+
       componentDidMount() {
         let ref = firebase.database().ref("/Product")
         this.setState({ isloading: true });
@@ -32,9 +36,20 @@ class ProductPage extends Component {
         });
       }
 
+      addClick = product => {
+          console.log(product)
+        let ref = firebase.database().ref("/Cart")
+        const pid = product.sku
+        const meta = product
+        ref.child(pid).set({
+            meta
+        })
+      };
+
     render() {
         const { isloading, productList } = this.state;
         var prod = productList[this.props.product];
+
         if (isloading) {
             return (<div>Loading Product</div>);
         } else {
@@ -66,15 +81,17 @@ class ProductPage extends Component {
                     <div className={styles.description}>{prod.description} </div>
                     <div className={styles.description}>{prod.details} </div>
                     <div className={styles.container}>
-                        <div className={styles.pricebox}> Add </div>
-                        <div className={styles.pricebox}> Check Out </div>
+                        <button className={styles.pricebox} onClick={this.addClick.bind(this, prod)}> Add </button>
+                        <Link to={`/checkout`} className={styles.pricebox}> Check Out </Link>
 
                     </div>
                 </div>
             </div>
         )}
     }
+    
 }
+
 
 
 export default ProductPage;
