@@ -1,3 +1,8 @@
+## NUvention project [WEAREVER]
+This project was made as a product for NUvention project WEAREVER. <br>
+See live demo [here](https://wearever-nuv.firebaseapp.com/).
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

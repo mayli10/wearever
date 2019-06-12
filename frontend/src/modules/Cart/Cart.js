@@ -14,6 +14,7 @@ class Cart extends Component {
         this.state = {
           isloading: true,
           productList: [],
+          listExists: false,
           total:0,
         };
     }
@@ -24,15 +25,22 @@ class Cart extends Component {
     
         ref.on('value', snapshot => {
           const productsObject = snapshot.val();
-          const list = Object.keys(productsObject).map(key => ({
-            ...productsObject[key],
-            uid: key,
-          }));
-    
-          this.setState({
-            productList: list,
-            isloading: false,
-          });
+          if (productsObject === undefined || productsObject === null) {
+            this.setState({
+              isloading: false
+            })
+          } else {
+            const list = Object.keys(productsObject).map(key => ({
+              ...productsObject[key],
+              uid: key,
+            }));
+      
+            this.setState({
+              listExists: true,
+              productList: list,
+              isloading: false,
+            });
+          }
         });
       }
 
@@ -43,6 +51,7 @@ class Cart extends Component {
           <div className={styles['outer-container']}>
              <div className={styles.header}>My Wearever Box</div>
             { isloading && <div className={styles.cart}>Loading</div> }
+            { ~this.state.listExists && <div className={styles.cart}>There's nothing in the cart. Start browsing! </div>}
             { productList && productList.map(product =>
               <div class={styles.cart}>
                   <CartItem item = {product.meta}></CartItem>

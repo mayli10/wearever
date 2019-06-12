@@ -5,7 +5,6 @@ import classNames from 'classnames';
 import EmailPopup from './EmailPopup';
 import LandingNavBar from './LandingNavBar';
 import buttonStyles from '../styles/button.module.css';
-import WixLandingPage from './WixLandingPage';
 import FilterBar from '../modules/FilterBar/Container';
 import SideBar from '../modules/SideBar/Container';
 import ProductList from '../modules/Products/ProductList/Container';
@@ -153,5 +152,5 @@ export const LandingPage = () => (
         </div>
     </div>
 </div>
+)
 export default LandingPage;
-
