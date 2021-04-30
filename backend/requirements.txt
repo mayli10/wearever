@@ -47,7 +47,7 @@ python-dateutil==2.7.5
 rauth==0.7.3
 requests>=2.20.0
 requests-oauthlib==1.2.0
-rsa==4.0
+rsa==4.7
 ruamel.yaml==0.15.46
 scholarly==0.2.3
 six==1.11.0
